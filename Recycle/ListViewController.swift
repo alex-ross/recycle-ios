@@ -7,6 +7,7 @@ class ListViewController: UIViewController {
     var locationManager: CLLocationManager?
     var mapView: MKMapView!
     var recycleLocations = [RecycleLocation]()
+    var deviceLocation: CLLocationCoordinate2D?
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             setupMap()
@@ -16,11 +17,9 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         APIClient.sharedInstance.recycleLocations.index { recycleLocations in
             self.recycleLocations = recycleLocations
-            debugPrint(self.recycleLocations)
             self.addMapAnnotations()
             self.tableView.reloadData()
         }
-
     }
 
     private func setupMap() {
@@ -51,6 +50,15 @@ class ListViewController: UIViewController {
         })
         mapView.addAnnotations(annotations)
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detailFromCell" {
+            let toView = segue.destinationViewController as! DetailTableViewController
+            let cell = sender as! RecycleLocationTableViewCell
+            toView.recycleLocation = cell.recycleLocation
+            toView.deviceLocation = deviceLocation
+        }
+    }
 }
 
 extension ListViewController: UITableViewDataSource {
@@ -75,8 +83,11 @@ extension ListViewController: CLLocationManagerDelegate {
     }
 
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard startLocation == nil else { return }
         guard let location = locations.first else { return }
+        deviceLocation = location.coordinate
+
+        guard startLocation == nil else { return }
+
 
         startLocation = location
 
