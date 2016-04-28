@@ -15,6 +15,7 @@
 		913D1FC41CD23B6700FD8A10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913D1FC21CD23B6700FD8A10 /* LaunchScreen.storyboard */; };
 		913D1FCF1CD23B6800FD8A10 /* RecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FCE1CD23B6800FD8A10 /* RecycleTests.swift */; };
 		913D1FDA1CD23B6800FD8A10 /* RecycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FD91CD23B6800FD8A10 /* RecycleUITests.swift */; };
+		913D1FE81CD25DED00FD8A10 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FE71CD25DED00FD8A10 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		913D1FD51CD23B6800FD8A10 /* RecycleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecycleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		913D1FD91CD23B6800FD8A10 /* RecycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleUITests.swift; sourceTree = "<group>"; };
 		913D1FDB1CD23B6800FD8A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		913D1FE71CD25DED00FD8A10 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		913D1FB51CD23B6700FD8A10 /* Recycle */ = {
 			isa = PBXGroup;
 			children = (
+				913D1FE71CD25DED00FD8A10 /* ListViewController.swift */,
 				913D1FB61CD23B6700FD8A10 /* AppDelegate.swift */,
 				913D1FB81CD23B6700FD8A10 /* ViewController.swift */,
 				913D1FBA1CD23B6700FD8A10 /* Main.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				913D1FB91CD23B6700FD8A10 /* ViewController.swift in Sources */,
 				913D1FBF1CD23B6700FD8A10 /* Recycle.xcdatamodeld in Sources */,
+				913D1FE81CD25DED00FD8A10 /* ListViewController.swift in Sources */,
 				913D1FB71CD23B6700FD8A10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +492,7 @@
 				913D1FE01CD23B6800FD8A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913D1FE11CD23B6800FD8A10 /* Build configuration list for PBXNativeTarget "RecycleTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				913D1FE31CD23B6800FD8A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913D1FE41CD23B6800FD8A10 /* Build configuration list for PBXNativeTarget "RecycleUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				913D1FE61CD23B6800FD8A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
