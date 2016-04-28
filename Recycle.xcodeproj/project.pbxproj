@@ -26,6 +26,7 @@
 		913D1FFD1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FFC1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift */; };
 		913D20001CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FFF1CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift */; };
 		913D20021CD2B5FE00FD8A10 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D20011CD2B5FE00FD8A10 /* DetailTableViewController.swift */; };
+		913D200C1CD2CEAC00FD8A10 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D200B1CD2CEAC00FD8A10 /* AddressTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		913D1FFC1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleLocationTableViewCell.swift; sourceTree = "<group>"; };
 		913D1FFF1CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleLocationPointAnnotation.swift; sourceTree = "<group>"; };
 		913D20011CD2B5FE00FD8A10 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		913D200B1CD2CEAC00FD8A10 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		913D1FFE1CD2943A00FD8A10 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				913D200B1CD2CEAC00FD8A10 /* AddressTableViewCell.swift */,
 				913D1FFF1CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift */,
 				913D1FFC1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift */,
 			);
@@ -362,6 +365,7 @@
 				913D1FFD1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift in Sources */,
 				913D1FBF1CD23B6700FD8A10 /* Recycle.xcdatamodeld in Sources */,
 				913D1FE81CD25DED00FD8A10 /* ListViewController.swift in Sources */,
+				913D200C1CD2CEAC00FD8A10 /* AddressTableViewCell.swift in Sources */,
 				913D1FB71CD23B6700FD8A10 /* AppDelegate.swift in Sources */,
 				913D20021CD2B5FE00FD8A10 /* DetailTableViewController.swift in Sources */,
 				913D20001CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift in Sources */,

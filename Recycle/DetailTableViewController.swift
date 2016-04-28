@@ -6,7 +6,7 @@ class DetailTableViewController: UITableViewController {
     // MARK: Cell outlets
     @IBOutlet weak var materialsCell: UITableViewCell!
     @IBOutlet weak var openingHoursCell: UITableViewCell!
-    @IBOutlet weak var addressCell: UITableViewCell!
+    @IBOutlet weak var addressCell: AddressTableViewCell!
     @IBOutlet weak var mapCell: UITableViewCell!
 
     // MARK: Kind outlets
@@ -55,6 +55,8 @@ class DetailTableViewController: UITableViewController {
         city.text = recycleLocation.address.city
 
         calculateTravelTime()
+        addressCell.coordinates = recycleLocation.coordinates
+        addressCell.addressName = recycleLocation.name
     }
 
     func hasMaterial(material: String) -> Bool {
