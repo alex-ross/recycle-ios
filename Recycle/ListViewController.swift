@@ -14,7 +14,16 @@ class ListViewController: UIViewController {
         }
     }
 
-    override func viewDidLoad() {
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.89, green:0.14, blue:0.07, alpha:1.00)
+        navigationController?.navigationBar.barStyle = .Black
+        navigationController?.navigationBar.shadowImage = nil
+        navigationController?.navigationBar.translucent = false
+
+
         APIClient.sharedInstance.recycleLocations.index { recycleLocations in
             self.recycleLocations = recycleLocations
             self.addMapAnnotations()

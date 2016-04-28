@@ -4,10 +4,10 @@ import CoreLocation
 
 class DetailTableViewController: UITableViewController {
     // MARK: Cell outlets
-    @IBOutlet weak var materialsCell: MaterialsTableViewCell!
-    @IBOutlet weak var openingHoursCell: OpeningHoursTableViewCell!
-    @IBOutlet weak var addressCell: AddressTableViewCell!
-    @IBOutlet weak var mapCell: MapTableViewCell!
+    @IBOutlet weak var materialsCell: UITableViewCell!
+    @IBOutlet weak var openingHoursCell: UITableViewCell!
+    @IBOutlet weak var addressCell: UITableViewCell!
+    @IBOutlet weak var mapCell: UITableViewCell!
 
     // MARK: Kind outlets
     @IBOutlet weak var kindLabel: UILabel!
@@ -39,6 +39,8 @@ class DetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = recycleLocation.name
 
         kindLabel.text = recycleLocation.localizedKind
 
