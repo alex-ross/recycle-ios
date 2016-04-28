@@ -17,7 +17,7 @@ class RecycleLocationTableViewCell: UITableViewCell {
 
     func setupView() {
         nameLabel.text = recycleLocation.name
-        setupKindName()
+        kindLabel.text = recycleLocation.localizedKind
 
         materialGlass.hidden = !hasMaterial("glass")
         materialCardboard.hidden = !hasMaterial("cardboard")
@@ -28,16 +28,5 @@ class RecycleLocationTableViewCell: UITableViewCell {
 
     func hasMaterial(material: String) -> Bool {
         return recycleLocation.materials.contains(material)
-    }
-
-    func setupKindName() {
-        switch recycleLocation.kind {
-        case "recycle_station":
-            kindLabel.text = "Återvinningstation"
-        case "recycle_central":
-            kindLabel.text = "Återvinningcentral"
-        default:
-            kindLabel.text = "Okänd typ"
-        }
     }
 }

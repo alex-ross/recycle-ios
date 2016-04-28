@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		913D1FB71CD23B6700FD8A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FB61CD23B6700FD8A10 /* AppDelegate.swift */; };
-		913D1FB91CD23B6700FD8A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FB81CD23B6700FD8A10 /* ViewController.swift */; };
 		913D1FBC1CD23B6700FD8A10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913D1FBA1CD23B6700FD8A10 /* Main.storyboard */; };
 		913D1FBF1CD23B6700FD8A10 /* Recycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FBD1CD23B6700FD8A10 /* Recycle.xcdatamodeld */; };
 		913D1FC11CD23B6700FD8A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913D1FC01CD23B6700FD8A10 /* Assets.xcassets */; };
@@ -25,6 +24,7 @@
 		913D1FF61CD28C5400FD8A10 /* RecycleLocationDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FF51CD28C5400FD8A10 /* RecycleLocationDeserializer.swift */; };
 		913D1FF81CD2909A00FD8A10 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FF71CD2909A00FD8A10 /* Address.swift */; };
 		913D1FFD1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FFC1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift */; };
+		913D20001CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FFF1CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 /* Begin PBXFileReference section */
 		913D1FB31CD23B6700FD8A10 /* Recycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913D1FB61CD23B6700FD8A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		913D1FB81CD23B6700FD8A10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		913D1FBB1CD23B6700FD8A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		913D1FBE1CD23B6700FD8A10 /* Recycle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recycle.xcdatamodel; sourceTree = "<group>"; };
 		913D1FC01CD23B6700FD8A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		913D1FF51CD28C5400FD8A10 /* RecycleLocationDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleLocationDeserializer.swift; sourceTree = "<group>"; };
 		913D1FF71CD2909A00FD8A10 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		913D1FFC1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleLocationTableViewCell.swift; sourceTree = "<group>"; };
+		913D1FFF1CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleLocationPointAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +142,6 @@
 				913D1FFB1CD291A700FD8A10 /* Controllers */,
 				913D1FF31CD286D700FD8A10 /* APIClient.swift */,
 				913D1FB61CD23B6700FD8A10 /* AppDelegate.swift */,
-				913D1FB81CD23B6700FD8A10 /* ViewController.swift */,
 				913D1FBA1CD23B6700FD8A10 /* Main.storyboard */,
 				913D1FC01CD23B6700FD8A10 /* Assets.xcassets */,
 				913D1FC21CD23B6700FD8A10 /* LaunchScreen.storyboard */,
@@ -198,6 +197,7 @@
 		913D1FFE1CD2943A00FD8A10 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				913D1FFF1CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift */,
 				913D1FFC1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift */,
 			);
 			name = ViewModels;
@@ -354,13 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				913D1FB91CD23B6700FD8A10 /* ViewController.swift in Sources */,
 				913D1FF21CD2866A00FD8A10 /* RecycleLocation.swift in Sources */,
 				913D1FF61CD28C5400FD8A10 /* RecycleLocationDeserializer.swift in Sources */,
 				913D1FFD1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift in Sources */,
 				913D1FBF1CD23B6700FD8A10 /* Recycle.xcdatamodeld in Sources */,
 				913D1FE81CD25DED00FD8A10 /* ListViewController.swift in Sources */,
 				913D1FB71CD23B6700FD8A10 /* AppDelegate.swift in Sources */,
+				913D20001CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift in Sources */,
 				913D1FF81CD2909A00FD8A10 /* Address.swift in Sources */,
 				913D1FF41CD286D700FD8A10 /* APIClient.swift in Sources */,
 			);

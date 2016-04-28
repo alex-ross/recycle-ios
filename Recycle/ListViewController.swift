@@ -17,6 +17,7 @@ class ListViewController: UIViewController {
         APIClient.sharedInstance.recycleLocations.index { recycleLocations in
             self.recycleLocations = recycleLocations
             debugPrint(self.recycleLocations)
+            self.addMapAnnotations()
             self.tableView.reloadData()
         }
 
@@ -42,6 +43,13 @@ class ListViewController: UIViewController {
     private func setupMapRegion() {
         locationManager?.requestLocation()
         mapView.showsUserLocation = true
+    }
+
+    private func addMapAnnotations() {
+        let annotations = recycleLocations.map({ recycleLocation in
+            RecycleLocationPointAnnotation(recycleLocation: recycleLocation, controller: self)
+        })
+        mapView.addAnnotations(annotations)
     }
 }
 
