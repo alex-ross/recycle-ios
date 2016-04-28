@@ -191,7 +191,7 @@
                                 <rect key="frame" x="0.0" y="142" width="600" height="758"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="36Y-fP-AiQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="36Y-fP-AiQ" customClass="RecycleLocationTableViewCell" customModule="Recycle" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="36Y-fP-AiQ" id="FjI-pU-QNb">
@@ -270,6 +270,15 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Qi7-g5-U1c" secondAttribute="bottom" constant="2.5" id="tfe-qf-tad"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="kindLabel" destination="qqZ-C4-oSU" id="nHS-jv-vML"/>
+                                            <outlet property="materialCardboard" destination="lNc-bD-rbY" id="WU8-zN-1fc"/>
+                                            <outlet property="materialGlass" destination="2nj-fp-tsU" id="6Ux-XR-LXL"/>
+                                            <outlet property="materialMagazines" destination="Ywc-wb-0tq" id="QkW-r9-fSI"/>
+                                            <outlet property="materialMetal" destination="Zgc-KM-gPY" id="R6I-Ew-85S"/>
+                                            <outlet property="materialPlastic" destination="8be-aB-yvs" id="URp-T7-A74"/>
+                                            <outlet property="nameLabel" destination="IRb-Vc-Zoc" id="4qj-2I-9X8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

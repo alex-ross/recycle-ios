@@ -16,6 +16,15 @@
 		913D1FCF1CD23B6800FD8A10 /* RecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FCE1CD23B6800FD8A10 /* RecycleTests.swift */; };
 		913D1FDA1CD23B6800FD8A10 /* RecycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FD91CD23B6800FD8A10 /* RecycleUITests.swift */; };
 		913D1FE81CD25DED00FD8A10 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FE71CD25DED00FD8A10 /* ListViewController.swift */; };
+		913D1FEB1CD285E800FD8A10 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913D1FE91CD285E800FD8A10 /* Alamofire.framework */; };
+		913D1FEC1CD285E800FD8A10 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 913D1FE91CD285E800FD8A10 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		913D1FED1CD285E800FD8A10 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913D1FEA1CD285E800FD8A10 /* SwiftyJSON.framework */; };
+		913D1FEE1CD285E800FD8A10 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 913D1FEA1CD285E800FD8A10 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		913D1FF21CD2866A00FD8A10 /* RecycleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FF11CD2866A00FD8A10 /* RecycleLocation.swift */; };
+		913D1FF41CD286D700FD8A10 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FF31CD286D700FD8A10 /* APIClient.swift */; };
+		913D1FF61CD28C5400FD8A10 /* RecycleLocationDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FF51CD28C5400FD8A10 /* RecycleLocationDeserializer.swift */; };
+		913D1FF81CD2909A00FD8A10 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FF71CD2909A00FD8A10 /* Address.swift */; };
+		913D1FFD1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FFC1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		913D1FEF1CD285E800FD8A10 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				913D1FEE1CD285E800FD8A10 /* SwiftyJSON.framework in Embed Frameworks */,
+				913D1FEC1CD285E800FD8A10 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		913D1FB31CD23B6700FD8A10 /* Recycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913D1FB61CD23B6700FD8A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +75,13 @@
 		913D1FD91CD23B6800FD8A10 /* RecycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleUITests.swift; sourceTree = "<group>"; };
 		913D1FDB1CD23B6800FD8A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913D1FE71CD25DED00FD8A10 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		913D1FE91CD285E800FD8A10 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		913D1FEA1CD285E800FD8A10 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		913D1FF11CD2866A00FD8A10 /* RecycleLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleLocation.swift; sourceTree = "<group>"; };
+		913D1FF31CD286D700FD8A10 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		913D1FF51CD28C5400FD8A10 /* RecycleLocationDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleLocationDeserializer.swift; sourceTree = "<group>"; };
+		913D1FF71CD2909A00FD8A10 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		913D1FFC1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleLocationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913D1FED1CD285E800FD8A10 /* SwiftyJSON.framework in Frameworks */,
+				913D1FEB1CD285E800FD8A10 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +114,8 @@
 		913D1FAA1CD23B6700FD8A10 = {
 			isa = PBXGroup;
 			children = (
+				913D1FE91CD285E800FD8A10 /* Alamofire.framework */,
+				913D1FEA1CD285E800FD8A10 /* SwiftyJSON.framework */,
 				913D1FB51CD23B6700FD8A10 /* Recycle */,
 				913D1FCD1CD23B6800FD8A10 /* RecycleTests */,
 				913D1FD81CD23B6800FD8A10 /* RecycleUITests */,
@@ -101,7 +136,11 @@
 		913D1FB51CD23B6700FD8A10 /* Recycle */ = {
 			isa = PBXGroup;
 			children = (
-				913D1FE71CD25DED00FD8A10 /* ListViewController.swift */,
+				913D1FFE1CD2943A00FD8A10 /* ViewModels */,
+				913D1FF91CD2912500FD8A10 /* Models */,
+				913D1FFA1CD2913500FD8A10 /* Deserializers */,
+				913D1FFB1CD291A700FD8A10 /* Controllers */,
+				913D1FF31CD286D700FD8A10 /* APIClient.swift */,
 				913D1FB61CD23B6700FD8A10 /* AppDelegate.swift */,
 				913D1FB81CD23B6700FD8A10 /* ViewController.swift */,
 				913D1FBA1CD23B6700FD8A10 /* Main.storyboard */,
@@ -131,6 +170,39 @@
 			path = RecycleUITests;
 			sourceTree = "<group>";
 		};
+		913D1FF91CD2912500FD8A10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				913D1FF11CD2866A00FD8A10 /* RecycleLocation.swift */,
+				913D1FF71CD2909A00FD8A10 /* Address.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		913D1FFA1CD2913500FD8A10 /* Deserializers */ = {
+			isa = PBXGroup;
+			children = (
+				913D1FF51CD28C5400FD8A10 /* RecycleLocationDeserializer.swift */,
+			);
+			name = Deserializers;
+			sourceTree = "<group>";
+		};
+		913D1FFB1CD291A700FD8A10 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				913D1FE71CD25DED00FD8A10 /* ListViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		913D1FFE1CD2943A00FD8A10 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				913D1FFC1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +213,8 @@
 				913D1FAF1CD23B6700FD8A10 /* Sources */,
 				913D1FB01CD23B6700FD8A10 /* Frameworks */,
 				913D1FB11CD23B6700FD8A10 /* Resources */,
+				913D1FEF1CD285E800FD8A10 /* Embed Frameworks */,
+				913D1FF01CD2861100FD8A10 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -257,15 +331,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		913D1FF01CD2861100FD8A10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		913D1FAF1CD23B6700FD8A10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				913D1FB91CD23B6700FD8A10 /* ViewController.swift in Sources */,
+				913D1FF21CD2866A00FD8A10 /* RecycleLocation.swift in Sources */,
+				913D1FF61CD28C5400FD8A10 /* RecycleLocationDeserializer.swift in Sources */,
+				913D1FFD1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift in Sources */,
 				913D1FBF1CD23B6700FD8A10 /* Recycle.xcdatamodeld in Sources */,
 				913D1FE81CD25DED00FD8A10 /* ListViewController.swift in Sources */,
 				913D1FB71CD23B6700FD8A10 /* AppDelegate.swift in Sources */,
+				913D1FF81CD2909A00FD8A10 /* Address.swift in Sources */,
+				913D1FF41CD286D700FD8A10 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +506,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Recycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.standout.Recycle;
@@ -420,6 +521,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Recycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.standout.Recycle;

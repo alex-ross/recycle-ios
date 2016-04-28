@@ -6,21 +6,28 @@ class ListViewController: UIViewController {
     private var startLocation: CLLocation?
     var locationManager: CLLocationManager?
     var mapView: MKMapView!
+    var recycleLocations = [RecycleLocation]()
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             setupMap()
         }
     }
 
+    override func viewDidLoad() {
+        APIClient.sharedInstance.recycleLocations.index { recycleLocations in
+            self.recycleLocations = recycleLocations
+            debugPrint(self.recycleLocations)
+            self.tableView.reloadData()
+        }
+
+    }
+
     private func setupMap() {
         locationManager = CLLocationManager()
         locationManager?.delegate = self
 
-
         let frame = CGRect(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 160.0)
         mapView = MKMapView(frame: frame)
-
-
 
         if CLLocationManager.authorizationStatus() == .AuthorizedAlways ||
             CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
@@ -40,7 +47,7 @@ class ListViewController: UIViewController {
 
 extension ListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return recycleLocations.count
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -48,7 +55,8 @@ extension ListViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell")!
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! RecycleLocationTableViewCell
+        cell.recycleLocation = recycleLocations[indexPath.row]
         return cell
     }
 }
