@@ -4,6 +4,7 @@ import CoreLocation
 
 class ListViewController: UIViewController {
     var locationManager: CLLocationManager?
+    var annotations = [RecycleLocationPointAnnotation]()
     var mapView: MKMapView! {
         didSet {
             mapView.delegate = self
@@ -62,10 +63,16 @@ class ListViewController: UIViewController {
     }
 
     private func addMapAnnotations() {
-        let annotations = recycleLocations.map({ recycleLocation in
+        annotations = filteredRecycleLocations.map({ recycleLocation in
             RecycleLocationPointAnnotation(recycleLocation: recycleLocation, controller: self)
         })
         mapView.addAnnotations(annotations)
+    }
+
+    private func resetAnnotations() {
+        let oldAnnotations = annotations
+        addMapAnnotations()
+        mapView.removeAnnotations(oldAnnotations)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -103,7 +110,7 @@ class ListViewController: UIViewController {
                 return location.materials.contains(material)
             }).count == materials.count
         }
-
+        resetAnnotations()
         tableView.reloadData()
     }
 
