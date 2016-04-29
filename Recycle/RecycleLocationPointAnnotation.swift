@@ -14,4 +14,8 @@ class RecycleLocationPointAnnotation: MKPointAnnotation {
         title = recycleLocation.name
         subtitle = recycleLocation.localizedKind
     }
+
+    func visit() {
+        controller.performSegueWithIdentifier("detailFromAnnotation", sender: self)
+    }
 }

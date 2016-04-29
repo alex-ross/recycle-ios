@@ -327,6 +327,7 @@
                         <outlet property="metalButton" destination="L9J-rn-nMK" id="fuT-87-Kud"/>
                         <outlet property="plasticButton" destination="Zja-80-vJg" id="HEM-NW-7Jp"/>
                         <outlet property="tableView" destination="RB4-Vl-Nel" id="Tak-xZ-clo"/>
+                        <segue destination="ErE-s1-cSm" kind="show" identifier="detailFromAnnotation" id="L3q-Oz-JF5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -954,7 +955,7 @@
         <image name="PlasticInactiveIcon" width="43" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DPk-C1-UqW"/>
+        <segue reference="L3q-Oz-JF5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.89411764705882346" green="0.13725490196078433" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
 </document>

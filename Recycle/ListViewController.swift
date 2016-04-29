@@ -4,7 +4,11 @@ import CoreLocation
 
 class ListViewController: UIViewController {
     var locationManager: CLLocationManager?
-    var mapView: MKMapView!
+    var mapView: MKMapView! {
+        didSet {
+            mapView.delegate = self
+        }
+    }
     var recycleLocations = [RecycleLocation]() {
         didSet {
             filterRecycleLocations()
@@ -69,6 +73,10 @@ class ListViewController: UIViewController {
             let toView = segue.destinationViewController as! DetailTableViewController
             let cell = sender as! RecycleLocationTableViewCell
             toView.recycleLocation = cell.recycleLocation
+        } else if segue.identifier == "detailFromAnnotation" {
+            let toView = segue.destinationViewController as! DetailTableViewController
+            let annotation = sender as! RecycleLocationPointAnnotation
+            toView.recycleLocation = annotation.recycleLocation
         }
     }
 
@@ -180,5 +188,23 @@ extension ListViewController: CLLocationManagerDelegate {
         default:
             break
         }
+    }
+}
+
+extension ListViewController: MKMapViewDelegate {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation.isMemberOfClass(RecycleLocationPointAnnotation) else { return nil }
+
+        let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "loc")
+
+        let infoButton = UIButton(type: .DetailDisclosure)
+        infoButton.addTarget(annotation,
+                             action: #selector(RecycleLocationPointAnnotation.visit),
+                             forControlEvents: .TouchUpInside)
+
+        view.rightCalloutAccessoryView = infoButton
+        view.canShowCallout = true
+
+        return view
     }
 }
