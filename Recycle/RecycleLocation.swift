@@ -8,6 +8,8 @@ struct RecycleLocation {
     let coordinates: CLLocationCoordinate2D
     let address: Address
 
+    let openingHours: [OpeningHour]
+
     var localizedKind: String {
         switch kind {
         case "recycle_station":

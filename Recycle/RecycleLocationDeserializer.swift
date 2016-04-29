@@ -18,7 +18,8 @@ class RecycleLocationDeserializer: NSObject {
             kind: aJson["kind"].stringValue,
             materials: parseMaterials(aJson),
             coordinates: parseCoordinates(aJson),
-            address: parseAddress(aJson)
+            address: parseAddress(aJson),
+            openingHours: parseOpeningHours(aJson)
         )
     }
 
@@ -38,5 +39,15 @@ class RecycleLocationDeserializer: NSObject {
 
     private static func parseMaterials(json: JSON) -> [String] {
         return json["materials"].arrayValue.map { $0.stringValue }
+    }
+
+    private static func parseOpeningHours(json: JSON) -> [OpeningHour] {
+        return json["opening_hours"].arrayValue.map { openingHour in
+            if let array = openingHour.arrayObject {
+                return OpeningHour(openAt: array.first as? String, closeAt: array.last as? String, isUnknown: false)
+            } else {
+                return OpeningHour(openAt: nil, closeAt: nil, isUnknown: true)
+            }
+        }
     }
 }

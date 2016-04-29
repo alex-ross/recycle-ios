@@ -28,13 +28,13 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var travelTime: UILabel!
 
     // MARK: Opening hours outlets
-    @IBOutlet weak var openingHoursMonday: UILabel!
-    @IBOutlet weak var openingHoursTuesday: UILabel!
+    @IBOutlet weak var openingHoursMonday:    UILabel!
+    @IBOutlet weak var openingHoursTuesday:   UILabel!
     @IBOutlet weak var openingHoursWednesday: UILabel!
-    @IBOutlet weak var openingHoursThursday: UILabel!
-    @IBOutlet weak var openingHoursFriday: UILabel!
-    @IBOutlet weak var openingHoursSaturday: UILabel!
-    @IBOutlet weak var openingHoursSunday: UILabel!
+    @IBOutlet weak var openingHoursThursday:  UILabel!
+    @IBOutlet weak var openingHoursFriday:    UILabel!
+    @IBOutlet weak var openingHoursSaturday:  UILabel!
+    @IBOutlet weak var openingHoursSunday:    UILabel!
 
     var recycleLocation: RecycleLocation!
 
@@ -58,8 +58,24 @@ class DetailTableViewController: UITableViewController {
         addressCell.coordinates = recycleLocation.coordinates
         addressCell.addressName = recycleLocation.name
 
+        openingHoursMonday.text = opening(0)
+        openingHoursTuesday.text = opening(1)
+        openingHoursWednesday.text = opening(2)
+        openingHoursThursday.text = opening(3)
+        openingHoursFriday.text = opening(4)
+        openingHoursSaturday.text = opening(5)
+        openingHoursSunday.text = opening(6)
+
         calculateTravelTime()
         setupMapRegion()
+    }
+
+    func opening(day: Int) -> String {
+        if day < recycleLocation.openingHours.count {
+            return recycleLocation.openingHours[day].openingText
+        } else {
+            return ""
+        }
     }
 
     func hasMaterial(material: String) -> Bool {
