@@ -897,6 +897,7 @@
                         <outlet property="city" destination="FBY-BW-xHy" id="90h-oI-oZ2"/>
                         <outlet property="kindLabel" destination="cOh-aB-hfX" id="2dI-9Q-j5g"/>
                         <outlet property="mapCell" destination="6Ma-uf-vvl" id="2ux-oK-Jd4"/>
+                        <outlet property="mapView" destination="Exe-PK-kts" id="Jm2-Vk-zuU"/>
                         <outlet property="materialCardboard" destination="uId-fN-7mO" id="Hns-Hx-TUi"/>
                         <outlet property="materialGlass" destination="zci-yb-TOw" id="MCR-tN-VZu"/>
                         <outlet property="materialMagazines" destination="XMf-sk-U3g" id="OWt-73-1kP"/>

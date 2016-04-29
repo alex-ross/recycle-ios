@@ -8,6 +8,9 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var addressCell: AddressTableViewCell!
     @IBOutlet weak var mapCell: UITableViewCell!
 
+    // MARK: Map view outlets
+    @IBOutlet weak var mapView: MKMapView!
+
     // MARK: Kind outlets
     @IBOutlet weak var kindLabel: UILabel!
 
@@ -56,6 +59,7 @@ class DetailTableViewController: UITableViewController {
         addressCell.addressName = recycleLocation.name
 
         calculateTravelTime()
+        setupMapRegion()
     }
 
     func hasMaterial(material: String) -> Bool {
@@ -84,6 +88,16 @@ class DetailTableViewController: UITableViewController {
                 self.setupTravelTime(time)
             }
         }
+    }
+
+    func setupMapRegion() {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = recycleLocation.coordinates
+        mapView.addAnnotation(annotation)
+
+        let region = MKCoordinateRegionMakeWithDistance(recycleLocation.coordinates, 300, 300)
+        mapView.regionThatFits(region)
+        mapView.setRegion(region, animated: true)
     }
 
     func setupTravelTime(expectedTravelTime: NSTimeInterval) {

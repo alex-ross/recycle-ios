@@ -12,7 +12,7 @@ struct RecycleLocation {
         switch kind {
         case "recycle_station":
             return "Återvinningstation"
-        case "recycle_central":
+        case "recycle_center":
             return "Återvinningcentral"
         default:
             return "Okänd typ"
