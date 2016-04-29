@@ -1,6 +1,7 @@
 import Foundation
 import SwiftyJSON
 import Alamofire
+import CoreLocation
 
 class APIClient: NSObject {
     static let sharedInstance = APIClient()
@@ -35,9 +36,13 @@ class APIClient: NSObject {
             self.client = client
         }
 
-        func index(success: [RecycleLocation] -> ()) {
+        func index(coordinate: CLLocationCoordinate2D, success: [RecycleLocation] -> ()) {
+            let parameters = [
+                "latitude": coordinate.latitude,
+                "longitude": coordinate.longitude
+            ]
             client.apiManager()
-                .request(.GET, "\(client.endpoint)/recycle_locations")
+                .request(.GET, "\(client.endpoint)/recycle_locations", parameters: parameters)
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
                     switch response.result {

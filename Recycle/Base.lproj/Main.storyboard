@@ -42,7 +42,10 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="43" id="ZGs-B1-1oP"/>
                                                         </constraints>
-                                                        <state key="normal" image="GlasIcon"/>
+                                                        <state key="normal" image="GlasInactiveIcon"/>
+                                                        <connections>
+                                                            <action selector="filterToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udE-RB-WKk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.89411764709999997" green="0.13725490200000001" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,7 +76,10 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="43" id="t8B-YB-onc"/>
                                                         </constraints>
-                                                        <state key="normal" image="CarboardIcon"/>
+                                                        <state key="normal" image="CarboardInactiveIcon"/>
+                                                        <connections>
+                                                            <action selector="filterToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6MS-6v-2a1"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.89411764709999997" green="0.13725490200000001" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -104,7 +110,10 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="43" id="LEK-jI-hmo"/>
                                                         </constraints>
-                                                        <state key="normal" image="PlasticIcon"/>
+                                                        <state key="normal" image="PlasticInactiveIcon"/>
+                                                        <connections>
+                                                            <action selector="filterToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jln-5x-wJ1"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.89411764709999997" green="0.13725490200000001" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -135,7 +144,10 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="43" id="Prp-OS-Yho"/>
                                                         </constraints>
-                                                        <state key="normal" image="PapersIcon"/>
+                                                        <state key="normal" image="PapersInactiveIcon"/>
+                                                        <connections>
+                                                            <action selector="filterToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h6Z-Xi-fKV"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.89411764709999997" green="0.13725490200000001" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,7 +178,10 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="43" id="M7N-e9-dzr"/>
                                                         </constraints>
-                                                        <state key="normal" image="MetalIcon"/>
+                                                        <state key="normal" image="MetalInactiveIcon"/>
+                                                        <connections>
+                                                            <action selector="filterToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZj-PT-uWl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.89411764709999997" green="0.13725490200000001" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -306,6 +321,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="900"/>
                     <connections>
+                        <outlet property="cardboardButton" destination="0RC-Mh-47F" id="BVD-t0-Cyr"/>
+                        <outlet property="glassButton" destination="LDK-Ku-RuE" id="wro-lh-FPW"/>
+                        <outlet property="magazinesButton" destination="VeN-Jc-Gaa" id="olq-rM-kwR"/>
+                        <outlet property="metalButton" destination="L9J-rn-nMK" id="fuT-87-Kud"/>
+                        <outlet property="plasticButton" destination="Zja-80-vJg" id="HEM-NW-7Jp"/>
                         <outlet property="tableView" destination="RB4-Vl-Nel" id="Tak-xZ-clo"/>
                     </connections>
                 </viewController>
@@ -324,7 +344,7 @@
                         <sections>
                             <tableViewSection id="c6I-ho-THd">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="6Ma-uf-vvl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="200" id="6Ma-uf-vvl">
                                         <rect key="frame" x="0.0" y="64" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ma-uf-vvl" id="ghi-jn-MR9">
@@ -343,7 +363,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="wId-w8-RPh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="96" id="wId-w8-RPh">
                                         <rect key="frame" x="0.0" y="264" width="600" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wId-w8-RPh" id="K66-ji-BAi">
@@ -519,7 +539,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="XXg-0h-RpU" customClass="AddressTableViewCell" customModule="Recycle" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="85" id="XXg-0h-RpU" customClass="AddressTableViewCell" customModule="Recycle" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="360" width="600" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XXg-0h-RpU" id="o09-ke-mIB">
@@ -553,8 +573,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Xj-1k-45j">
                                                     <rect key="frame" x="499" y="8" width="93" height="68"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUV-Pa-vfL">
-                                                            <rect key="frame" x="39" y="47" width="14" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laddar ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUV-Pa-vfL">
+                                                            <rect key="frame" x="10.5" y="47" width="72" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="i8J-FA-mly"/>
                                                             </constraints>
@@ -593,7 +613,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="210" id="KYd-hN-xG0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="210" id="KYd-hN-xG0">
                                         <rect key="frame" x="0.0" y="445" width="600" height="210"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYd-hN-xG0" id="Jbh-jq-pUD">
@@ -922,15 +942,15 @@
     <resources>
         <image name="CarIcon" width="23" height="18"/>
         <image name="CarboardBlackIcon" width="43" height="43"/>
-        <image name="CarboardIcon" width="43" height="43"/>
+        <image name="CarboardInactiveIcon" width="43" height="43"/>
         <image name="GlasBlackIcon" width="43" height="43"/>
-        <image name="GlasIcon" width="43" height="43"/>
+        <image name="GlasInactiveIcon" width="43" height="43"/>
         <image name="MetalBlackIcon" width="43" height="43"/>
-        <image name="MetalIcon" width="43" height="43"/>
+        <image name="MetalInactiveIcon" width="43" height="43"/>
         <image name="PapersBlackIcon" width="43" height="43"/>
-        <image name="PapersIcon" width="43" height="43"/>
+        <image name="PapersInactiveIcon" width="43" height="43"/>
         <image name="PlasticBlackIcon" width="43" height="43"/>
-        <image name="PlasticIcon" width="43" height="43"/>
+        <image name="PlasticInactiveIcon" width="43" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DPk-C1-UqW"/>

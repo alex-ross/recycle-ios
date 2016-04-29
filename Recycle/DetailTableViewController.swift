@@ -1,6 +1,5 @@
 import UIKit
 import MapKit
-import CoreLocation
 
 class DetailTableViewController: UITableViewController {
     // MARK: Cell outlets
@@ -35,7 +34,6 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var openingHoursSunday: UILabel!
 
     var recycleLocation: RecycleLocation!
-    var deviceLocation: CLLocationCoordinate2D?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +52,10 @@ class DetailTableViewController: UITableViewController {
         zipCode.text = recycleLocation.address.zipCode
         city.text = recycleLocation.address.city
 
-        calculateTravelTime()
         addressCell.coordinates = recycleLocation.coordinates
         addressCell.addressName = recycleLocation.name
+
+        calculateTravelTime()
     }
 
     func hasMaterial(material: String) -> Bool {
@@ -64,24 +63,22 @@ class DetailTableViewController: UITableViewController {
     }
 
     func calculateTravelTime() {
-        guard let location = deviceLocation else { return }
-
-        let source = MKMapItem( placemark: MKPlacemark(
-            coordinate: location,
-            addressDictionary: nil))
         let destination = MKMapItem(placemark: MKPlacemark(
             coordinate: recycleLocation.coordinates,
             addressDictionary: nil))
 
         let directionsRequest = MKDirectionsRequest()
-        directionsRequest.source = source
+        directionsRequest.source = MKMapItem.mapItemForCurrentLocation()
         directionsRequest.destination = destination
         directionsRequest.transportType = .Automobile
 
         let directions = MKDirections(request: directionsRequest)
 
-        directions.calculateDirectionsWithCompletionHandler { (response, error) in
-            print(error)
+        directions.calculateDirectionsWithCompletionHandler { response, error in
+            if error != nil {
+                print(error)
+                return
+            }
 
             if let time = response?.routes.first?.expectedTravelTime {
                 self.setupTravelTime(time)
@@ -96,7 +93,7 @@ class DetailTableViewController: UITableViewController {
         if hours > 0 {
             travelTime.text = "\(hours)h \(minutes)m"
         } else {
-            travelTime.text = "\(minutes)m"
+            travelTime.text = "\(minutes) min"
         }
     }
 

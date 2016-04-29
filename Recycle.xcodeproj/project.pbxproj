@@ -27,6 +27,7 @@
 		913D20001CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D1FFF1CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift */; };
 		913D20021CD2B5FE00FD8A10 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D20011CD2B5FE00FD8A10 /* DetailTableViewController.swift */; };
 		913D200C1CD2CEAC00FD8A10 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D200B1CD2CEAC00FD8A10 /* AddressTableViewCell.swift */; };
+		913D20101CD2E79000FD8A10 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D200F1CD2E79000FD8A10 /* Material.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		913D1FFF1CD2998100FD8A10 /* RecycleLocationPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleLocationPointAnnotation.swift; sourceTree = "<group>"; };
 		913D20011CD2B5FE00FD8A10 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		913D200B1CD2CEAC00FD8A10 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
+		913D200F1CD2E79000FD8A10 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		913D1FB51CD23B6700FD8A10 /* Recycle */ = {
 			isa = PBXGroup;
 			children = (
+				913D200F1CD2E79000FD8A10 /* Material.swift */,
 				913D1FFE1CD2943A00FD8A10 /* ViewModels */,
 				913D1FF91CD2912500FD8A10 /* Models */,
 				913D1FFA1CD2913500FD8A10 /* Deserializers */,
@@ -364,6 +367,7 @@
 				913D1FF61CD28C5400FD8A10 /* RecycleLocationDeserializer.swift in Sources */,
 				913D1FFD1CD2942000FD8A10 /* RecycleLocationTableViewCell.swift in Sources */,
 				913D1FBF1CD23B6700FD8A10 /* Recycle.xcdatamodeld in Sources */,
+				913D20101CD2E79000FD8A10 /* Material.swift in Sources */,
 				913D1FE81CD25DED00FD8A10 /* ListViewController.swift in Sources */,
 				913D200C1CD2CEAC00FD8A10 /* AddressTableViewCell.swift in Sources */,
 				913D1FB71CD23B6700FD8A10 /* AppDelegate.swift in Sources */,
