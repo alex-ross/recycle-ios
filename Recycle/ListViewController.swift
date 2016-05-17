@@ -4,6 +4,8 @@ import CoreLocation
 
 class ListViewController: UIViewController {
     var locationManager = CLLocationManager()
+    var refreshControl = UIRefreshControl()
+
     var annotations = [RecycleLocationPointAnnotation]()
     var mapView: MKMapView! {
         didSet {
@@ -33,6 +35,18 @@ class ListViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         setupNavigationController()
+        setupRefreshControl()
+    }
+
+    private func setupRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refreshData), forControlEvents: .ValueChanged)
+        self.tableView.insertSubview(refreshControl, atIndex: 0)
+    }
+
+    func refreshData() {
+        NSLog("Refresh controll was called")
+        _fetchDataFromAPICalled = false
+        locationManager.requestLocation()
     }
 
     private func setupNavigationController() {
@@ -88,7 +102,6 @@ class ListViewController: UIViewController {
             toView.recycleLocation = annotation.recycleLocation
         }
     }
-
 
     func toggleMaterial(material: Material) -> Bool {
         if let index = materials.indexOf(material) {
@@ -153,6 +166,9 @@ class ListViewController: UIViewController {
         NSLog("Will fetch fetch recycle locations for coordinate \(coordinate)")
         APIClient.sharedInstance.recycleLocations.index(coordinate) { recycleLocations in
             NSLog("Got \(recycleLocations.count) recycle locations for coordinate \(coordinate)")
+
+            // End refresh control if it is running
+            self.refreshControl.endRefreshing()
 
             self.recycleLocations = recycleLocations
             self.addMapAnnotations()
