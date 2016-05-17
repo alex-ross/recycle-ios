@@ -3,7 +3,7 @@ import MapKit
 import CoreLocation
 
 class ListViewController: UIViewController {
-    var locationManager: CLLocationManager?
+    var locationManager = CLLocationManager()
     var annotations = [RecycleLocationPointAnnotation]()
     var mapView: MKMapView! {
         didSet {
@@ -32,7 +32,10 @@ class ListViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        setupNavigationController()
+    }
 
+    private func setupNavigationController() {
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar.barTintColor = UIColor(red:0.89, green:0.14, blue:0.07, alpha:1.00)
         navigationController?.navigationBar.barStyle = .Black
@@ -41,8 +44,7 @@ class ListViewController: UIViewController {
     }
 
     private func setupMap() {
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
+        locationManager.delegate = self
 
         let frame = CGRect(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 160.0)
         mapView = MKMapView(frame: frame)
@@ -51,14 +53,14 @@ class ListViewController: UIViewController {
             CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
             setupMapRegion()
         } else {
-            locationManager?.requestAlwaysAuthorization()
+            locationManager.requestAlwaysAuthorization()
         }
 
         tableView.tableHeaderView = mapView
     }
 
     private func setupMapRegion() {
-        locationManager?.requestLocation()
+        locationManager.requestLocation()
         mapView.showsUserLocation = true
     }
 
@@ -148,8 +150,10 @@ class ListViewController: UIViewController {
         guard !_fetchDataFromAPICalled else { return }
         _fetchDataFromAPICalled = true
 
-
+        NSLog("Will fetch fetch recycle locations for coordinate \(coordinate)")
         APIClient.sharedInstance.recycleLocations.index(coordinate) { recycleLocations in
+            NSLog("Got \(recycleLocations.count) recycle locations for coordinate \(coordinate)")
+
             self.recycleLocations = recycleLocations
             self.addMapAnnotations()
             self.tableView.reloadData()
@@ -175,11 +179,13 @@ extension ListViewController: UITableViewDataSource {
 
 extension ListViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        debugPrint(error)
+        NSLog("LocationManager did fail with error: \(error)")
     }
 
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
+
+        NSLog("LocationManager did update with location: \(location)")
 
         let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
         mapView.regionThatFits(region)
