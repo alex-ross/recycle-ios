@@ -1,10 +1,12 @@
 import UIKit
 import MapKit
 import CoreLocation
+import MBProgressHUD
 
 class ListViewController: UIViewController {
     var locationManager = CLLocationManager()
     var refreshControl = UIRefreshControl()
+    var progressHUD: MBProgressHUD?
 
     var annotations = [RecycleLocationPointAnnotation]()
     var mapView: MKMapView! {
@@ -20,12 +22,7 @@ class ListViewController: UIViewController {
     var filteredRecycleLocations = [RecycleLocation]()
     var materials = [Material]()
 
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            setupMap()
-        }
-    }
-
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var glassButton: UIButton!
     @IBOutlet weak var cardboardButton: UIButton!
     @IBOutlet weak var plasticButton: UIButton!
@@ -34,19 +31,9 @@ class ListViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        setupMap()
         setupNavigationController()
         setupRefreshControl()
-    }
-
-    private func setupRefreshControl() {
-        refreshControl.addTarget(self, action: #selector(refreshData), forControlEvents: .ValueChanged)
-        self.tableView.insertSubview(refreshControl, atIndex: 0)
-    }
-
-    func refreshData() {
-        NSLog("Refresh controll was called")
-        _fetchDataFromAPICalled = false
-        locationManager.requestLocation()
     }
 
     private func setupNavigationController() {
@@ -63,6 +50,9 @@ class ListViewController: UIViewController {
         let frame = CGRect(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 160.0)
         mapView = MKMapView(frame: frame)
 
+        progressHUD = MBProgressHUD.showHUDAddedTo(view, animated: true)
+        progressHUD?.labelText = "1/2 Hämtar position"
+
         if CLLocationManager.authorizationStatus() == .AuthorizedAlways ||
             CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
             setupMapRegion()
@@ -78,6 +68,30 @@ class ListViewController: UIViewController {
         mapView.showsUserLocation = true
     }
 
+    private var _fetchDataFromAPICalled = false
+    func fetchDataFromAPI(coordinate: CLLocationCoordinate2D) {
+        guard !_fetchDataFromAPICalled else { return }
+        _fetchDataFromAPICalled = true
+
+        NSLog("Will fetch fetch recycle locations for coordinate \(coordinate)")
+
+        progressHUD?.labelText = "2/2 Hämtar sorteringsplatser"
+
+        APIClient.sharedInstance.recycleLocations.index(coordinate) { recycleLocations in
+            NSLog("Got \(recycleLocations.count) recycle locations for coordinate \(coordinate)")
+
+            // End refresh control if it is running
+            self.refreshControl.endRefreshing()
+            self.progressHUD?.hide(true)
+
+            self.recycleLocations = recycleLocations
+            self.addMapAnnotations()
+            self.tableView.reloadData()
+        }
+    }
+
+    // MARK: - Annotations
+
     private func addMapAnnotations() {
         annotations = filteredRecycleLocations.map({ recycleLocation in
             RecycleLocationPointAnnotation(recycleLocation: recycleLocation, controller: self)
@@ -91,43 +105,7 @@ class ListViewController: UIViewController {
         mapView.removeAnnotations(oldAnnotations)
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "detailFromCell" {
-            let toView = segue.destinationViewController as! DetailTableViewController
-            let cell = sender as! RecycleLocationTableViewCell
-            toView.recycleLocation = cell.recycleLocation
-        } else if segue.identifier == "detailFromAnnotation" {
-            let toView = segue.destinationViewController as! DetailTableViewController
-            let annotation = sender as! RecycleLocationPointAnnotation
-            toView.recycleLocation = annotation.recycleLocation
-        }
-    }
-
-    func toggleMaterial(material: Material) -> Bool {
-        if let index = materials.indexOf(material) {
-            materials.removeAtIndex(index)
-            return false
-        } else {
-            materials.append(material)
-            return true
-        }
-    }
-
-    func buttonImage(baseName: String, active: Bool) -> UIImage? {
-        let name = active ? "\(baseName)Icon" : "\(baseName)InactiveIcon"
-        return UIImage(named: name)
-    }
-
-    func filterRecycleLocations() {
-        let materials = self.materials.map { $0.rawValue }
-        filteredRecycleLocations = recycleLocations.filter { location in
-            return materials.isEmpty || materials.filter({ material in
-                return location.materials.contains(material)
-            }).count == materials.count
-        }
-        resetAnnotations()
-        tableView.reloadData()
-    }
+    // MARK: - Filtering
 
     @IBAction func filterToggle(sender: UIButton) {
         switch sender {
@@ -158,23 +136,60 @@ class ListViewController: UIViewController {
         filterRecycleLocations()
     }
 
-    private var _fetchDataFromAPICalled = false
-    func fetchDataFromAPI(coordinate: CLLocationCoordinate2D) {
-        guard !_fetchDataFromAPICalled else { return }
-        _fetchDataFromAPICalled = true
-
-        NSLog("Will fetch fetch recycle locations for coordinate \(coordinate)")
-        APIClient.sharedInstance.recycleLocations.index(coordinate) { recycleLocations in
-            NSLog("Got \(recycleLocations.count) recycle locations for coordinate \(coordinate)")
-
-            // End refresh control if it is running
-            self.refreshControl.endRefreshing()
-
-            self.recycleLocations = recycleLocations
-            self.addMapAnnotations()
-            self.tableView.reloadData()
+    func toggleMaterial(material: Material) -> Bool {
+        if let index = materials.indexOf(material) {
+            materials.removeAtIndex(index)
+            return false
+        } else {
+            materials.append(material)
+            return true
         }
     }
+
+    func filterRecycleLocations() {
+        let materials = self.materials.map { $0.rawValue }
+        filteredRecycleLocations = recycleLocations.filter { location in
+            return materials.isEmpty || materials.filter({ material in
+                return location.materials.contains(material)
+            }).count == materials.count
+        }
+        resetAnnotations()
+        tableView.reloadData()
+    }
+
+    /// - Returns: `UIImage` view for filter toggle buttons
+    func buttonImage(baseName: String, active: Bool) -> UIImage? {
+        let name = active ? "\(baseName)Icon" : "\(baseName)InactiveIcon"
+        return UIImage(named: name)
+    }
+
+    // MARK: - Navigation
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detailFromCell" {
+            let toView = segue.destinationViewController as! DetailTableViewController
+            let cell = sender as! RecycleLocationTableViewCell
+            toView.recycleLocation = cell.recycleLocation
+        } else if segue.identifier == "detailFromAnnotation" {
+            let toView = segue.destinationViewController as! DetailTableViewController
+            let annotation = sender as! RecycleLocationPointAnnotation
+            toView.recycleLocation = annotation.recycleLocation
+        }
+    }
+
+    // MARK: - Refresh control
+
+    private func setupRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refreshData), forControlEvents: .ValueChanged)
+        self.tableView.insertSubview(refreshControl, atIndex: 0)
+    }
+
+    func refreshData() {
+        NSLog("Refresh controll was called")
+        _fetchDataFromAPICalled = false
+        locationManager.requestLocation()
+    }
+
 }
 
 extension ListViewController: UITableViewDataSource {
