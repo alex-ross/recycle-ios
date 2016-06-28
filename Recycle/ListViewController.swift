@@ -7,6 +7,7 @@ class ListViewController: UIViewController {
     var locationManager = CLLocationManager()
     var refreshControl = UIRefreshControl()
     var progressHUD: MBProgressHUD?
+    private var progressHUDUsed = false
 
     var annotations = [RecycleLocationPointAnnotation]()
     var mapView: MKMapView! {
@@ -50,8 +51,11 @@ class ListViewController: UIViewController {
         let frame = CGRect(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 160.0)
         mapView = MKMapView(frame: frame)
 
-        progressHUD = MBProgressHUD.showHUDAddedTo(view, animated: true)
-        progressHUD?.labelText = "1/2 Hämtar position"
+        if !progressHUDUsed {
+            progressHUD = MBProgressHUD.showHUDAddedTo(view, animated: true)
+            progressHUD?.labelText = "1/2 Hämtar position"
+            progressHUDUsed = true
+        }
 
         if CLLocationManager.authorizationStatus() == .AuthorizedAlways ||
             CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
