@@ -31,6 +31,7 @@
 		913D20121CD3018C00FD8A10 /* OpeningHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D20111CD3018C00FD8A10 /* OpeningHour.swift */; };
 		91445D511D21CD6E00B41F40 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91445D501D21CD6E00B41F40 /* MBProgressHUD.framework */; };
 		91445D521D21CD6E00B41F40 /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91445D501D21CD6E00B41F40 /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91445D541D21E6D800B41F40 /* RoutingAppCoverage.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 91445D531D21E6D800B41F40 /* RoutingAppCoverage.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		913D200F1CD2E79000FD8A10 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
 		913D20111CD3018C00FD8A10 /* OpeningHour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningHour.swift; sourceTree = "<group>"; };
 		91445D501D21CD6E00B41F40 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		91445D531D21E6D800B41F40 /* RoutingAppCoverage.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RoutingAppCoverage.geojson; sourceTree = "<group>"; };
+		91445D581D21E7F000B41F40 /* VislandaLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VislandaLocation.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 		913D1FAA1CD23B6700FD8A10 = {
 			isa = PBXGroup;
 			children = (
+				91445D581D21E7F000B41F40 /* VislandaLocation.gpx */,
+				91445D531D21E6D800B41F40 /* RoutingAppCoverage.geojson */,
 				91445D501D21CD6E00B41F40 /* MBProgressHUD.framework */,
 				913D1FE91CD285E800FD8A10 /* Alamofire.framework */,
 				913D1FEA1CD285E800FD8A10 /* SwiftyJSON.framework */,
@@ -330,6 +335,7 @@
 			files = (
 				913D1FC41CD23B6700FD8A10 /* LaunchScreen.storyboard in Resources */,
 				913D1FC11CD23B6700FD8A10 /* Assets.xcassets in Resources */,
+				91445D541D21E6D800B41F40 /* RoutingAppCoverage.geojson in Resources */,
 				913D1FBC1CD23B6700FD8A10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
