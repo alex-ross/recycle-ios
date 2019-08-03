@@ -95,7 +95,7 @@ class DetailTableViewController: UITableViewController {
         let directions = MKDirections(request: directionsRequest)
 
         directions.calculate { response, error in
-            if error != nil {
+            if let error = error {
                 print(error)
                 return
             }
