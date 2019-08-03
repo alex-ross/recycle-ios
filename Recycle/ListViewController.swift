@@ -53,7 +53,7 @@ class ListViewController: UIViewController {
 
         if !progressHUDUsed {
             progressHUD = MBProgressHUD.showAdded(to: view, animated: true)
-            progressHUD?.labelText = "1/2 Hämtar position"
+            progressHUD?.label.text = "1/2 Hämtar position"
             progressHUDUsed = true
         }
 
@@ -79,18 +79,19 @@ class ListViewController: UIViewController {
 
         NSLog("Will fetch fetch recycle locations for coordinate \(coordinate)")
 
-        progressHUD?.labelText = "2/2 Hämtar sorteringsplatser"
+        progressHUD?.label.text = "2/2 Hämtar sorteringsplatser"
 
         APIClient.sharedInstance.recycleLocations.index(coordinate) { recycleLocations in
             NSLog("Got \(recycleLocations.count) recycle locations for coordinate \(coordinate)")
+            DispatchQueue.main.async {
+                // End refresh control if it is running
+                self.refreshControl.endRefreshing()
+                self.progressHUD?.hide(animated: true)
 
-            // End refresh control if it is running
-            self.refreshControl.endRefreshing()
-            self.progressHUD?.hide(true)
-
-            self.recycleLocations = recycleLocations
-            self.addMapAnnotations()
-            self.tableView.reloadData()
+                self.recycleLocations = recycleLocations
+                self.addMapAnnotations()
+                self.tableView.reloadData()
+            }
         }
     }
 
