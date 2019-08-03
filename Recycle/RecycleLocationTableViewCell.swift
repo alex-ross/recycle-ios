@@ -19,14 +19,14 @@ class RecycleLocationTableViewCell: UITableViewCell {
         nameLabel.text = recycleLocation.name
         kindLabel.text = recycleLocation.localizedKind
 
-        materialGlass.hidden = !hasMaterial("glass")
-        materialCardboard.hidden = !hasMaterial("cardboard")
-        materialPlastic.hidden = !hasMaterial("plastic")
-        materialMagazines.hidden = !hasMaterial("magazines")
-        materialMetal.hidden = !hasMaterial("metal")
+        materialGlass.isHidden = !hasMaterial("glass")
+        materialCardboard.isHidden = !hasMaterial("cardboard")
+        materialPlastic.isHidden = !hasMaterial("plastic")
+        materialMagazines.isHidden = !hasMaterial("magazines")
+        materialMetal.isHidden = !hasMaterial("metal")
     }
 
-    func hasMaterial(material: String) -> Bool {
+    func hasMaterial(_ material: String) -> Bool {
         return recycleLocation.materials.contains(material)
     }
 }

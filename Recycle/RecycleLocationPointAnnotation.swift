@@ -16,6 +16,6 @@ class RecycleLocationPointAnnotation: MKPointAnnotation {
     }
 
     func visit() {
-        controller.performSegueWithIdentifier("detailFromAnnotation", sender: self)
+        controller.performSegue(withIdentifier: "detailFromAnnotation", sender: self)
     }
 }

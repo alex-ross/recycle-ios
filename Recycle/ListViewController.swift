@@ -7,7 +7,7 @@ class ListViewController: UIViewController {
     var locationManager = CLLocationManager()
     var refreshControl = UIRefreshControl()
     var progressHUD: MBProgressHUD?
-    private var progressHUDUsed = false
+    fileprivate var progressHUDUsed = false
 
     var annotations = [RecycleLocationPointAnnotation]()
     var mapView: MKMapView! {
@@ -30,35 +30,35 @@ class ListViewController: UIViewController {
     @IBOutlet weak var magazinesButton: UIButton!
     @IBOutlet weak var metalButton: UIButton!
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         setupMap()
         setupNavigationController()
         setupRefreshControl()
     }
 
-    private func setupNavigationController() {
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+    fileprivate func setupNavigationController() {
+        navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.barTintColor = UIColor(red:0.89, green:0.14, blue:0.07, alpha:1.00)
-        navigationController?.navigationBar.barStyle = .Black
+        navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.shadowImage = nil
-        navigationController?.navigationBar.translucent = false
+        navigationController?.navigationBar.isTranslucent = false
     }
 
-    private func setupMap() {
+    fileprivate func setupMap() {
         locationManager.delegate = self
 
         let frame = CGRect(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 160.0)
         mapView = MKMapView(frame: frame)
 
         if !progressHUDUsed {
-            progressHUD = MBProgressHUD.showHUDAddedTo(view, animated: true)
+            progressHUD = MBProgressHUD.showAdded(to: view, animated: true)
             progressHUD?.labelText = "1/2 Hämtar position"
             progressHUDUsed = true
         }
 
-        if CLLocationManager.authorizationStatus() == .AuthorizedAlways ||
-            CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways ||
+            CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             setupMapRegion()
         } else {
             locationManager.requestAlwaysAuthorization()
@@ -67,13 +67,13 @@ class ListViewController: UIViewController {
         tableView.tableHeaderView = mapView
     }
 
-    private func setupMapRegion() {
+    fileprivate func setupMapRegion() {
         locationManager.requestLocation()
         mapView.showsUserLocation = true
     }
 
-    private var _fetchDataFromAPICalled = false
-    func fetchDataFromAPI(coordinate: CLLocationCoordinate2D) {
+    fileprivate var _fetchDataFromAPICalled = false
+    func fetchDataFromAPI(_ coordinate: CLLocationCoordinate2D) {
         guard !_fetchDataFromAPICalled else { return }
         _fetchDataFromAPICalled = true
 
@@ -96,14 +96,14 @@ class ListViewController: UIViewController {
 
     // MARK: - Annotations
 
-    private func addMapAnnotations() {
+    fileprivate func addMapAnnotations() {
         annotations = filteredRecycleLocations.map({ recycleLocation in
             RecycleLocationPointAnnotation(recycleLocation: recycleLocation, controller: self)
         })
         mapView.addAnnotations(annotations)
     }
 
-    private func resetAnnotations() {
+    fileprivate func resetAnnotations() {
         let oldAnnotations = annotations
         addMapAnnotations()
         mapView.removeAnnotations(oldAnnotations)
@@ -111,28 +111,28 @@ class ListViewController: UIViewController {
 
     // MARK: - Filtering
 
-    @IBAction func filterToggle(sender: UIButton) {
+    @IBAction func filterToggle(_ sender: UIButton) {
         switch sender {
         case glassButton:
             let active = toggleMaterial(.Glass)
             let image = buttonImage("Glas", active: active)
-            sender.setImage(image, forState: .Normal)
+            sender.setImage(image, for: UIControlState())
         case cardboardButton:
             let active = toggleMaterial(.Cardboard)
             let image = buttonImage("Carboard", active: active)
-            sender.setImage(image, forState: .Normal)
+            sender.setImage(image, for: UIControlState())
         case plasticButton:
             let active = toggleMaterial(.Plastic)
             let image = buttonImage("Plastic", active: active)
-            sender.setImage(image, forState: .Normal)
+            sender.setImage(image, for: UIControlState())
         case magazinesButton:
             let active = toggleMaterial(.Magazines)
             let image = buttonImage("Papers", active: active)
-            sender.setImage(image, forState: .Normal)
+            sender.setImage(image, for: UIControlState())
         case metalButton:
             let active = toggleMaterial(.Metal)
             let image = buttonImage("Metal", active: active)
-            sender.setImage(image, forState: .Normal)
+            sender.setImage(image, for: UIControlState())
         default:
             break
         }
@@ -140,9 +140,9 @@ class ListViewController: UIViewController {
         filterRecycleLocations()
     }
 
-    func toggleMaterial(material: Material) -> Bool {
-        if let index = materials.indexOf(material) {
-            materials.removeAtIndex(index)
+    func toggleMaterial(_ material: Material) -> Bool {
+        if let index = materials.index(of: material) {
+            materials.remove(at: index)
             return false
         } else {
             materials.append(material)
@@ -162,20 +162,20 @@ class ListViewController: UIViewController {
     }
 
     /// - Returns: `UIImage` view for filter toggle buttons
-    func buttonImage(baseName: String, active: Bool) -> UIImage? {
+    func buttonImage(_ baseName: String, active: Bool) -> UIImage? {
         let name = active ? "\(baseName)Icon" : "\(baseName)InactiveIcon"
         return UIImage(named: name)
     }
 
     // MARK: - Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailFromCell" {
-            let toView = segue.destinationViewController as! DetailTableViewController
+            let toView = segue.destination as! DetailTableViewController
             let cell = sender as! RecycleLocationTableViewCell
             toView.recycleLocation = cell.recycleLocation
         } else if segue.identifier == "detailFromAnnotation" {
-            let toView = segue.destinationViewController as! DetailTableViewController
+            let toView = segue.destination as! DetailTableViewController
             let annotation = sender as! RecycleLocationPointAnnotation
             toView.recycleLocation = annotation.recycleLocation
         }
@@ -183,9 +183,9 @@ class ListViewController: UIViewController {
 
     // MARK: - Refresh control
 
-    private func setupRefreshControl() {
-        refreshControl.addTarget(self, action: #selector(refreshData), forControlEvents: .ValueChanged)
-        self.tableView.insertSubview(refreshControl, atIndex: 0)
+    fileprivate func setupRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        self.tableView.insertSubview(refreshControl, at: 0)
     }
 
     func refreshData() {
@@ -197,27 +197,27 @@ class ListViewController: UIViewController {
 }
 
 extension ListViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredRecycleLocations.count
     }
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! RecycleLocationTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RecycleLocationTableViewCell
         cell.recycleLocation = filteredRecycleLocations[indexPath.row]
         return cell
     }
 }
 
 extension ListViewController: CLLocationManagerDelegate {
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         NSLog("LocationManager did fail with error: \(error)")
     }
 
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
 
         NSLog("LocationManager did update with location: \(location)")
@@ -229,9 +229,9 @@ extension ListViewController: CLLocationManagerDelegate {
         fetchDataFromAPI(location.coordinate)
     }
 
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
-        case .AuthorizedWhenInUse, .AuthorizedAlways:
+        case .authorizedWhenInUse, .authorizedAlways:
             setupMapRegion()
         default:
             break
@@ -240,15 +240,15 @@ extension ListViewController: CLLocationManagerDelegate {
 }
 
 extension ListViewController: MKMapViewDelegate {
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation.isMemberOfClass(RecycleLocationPointAnnotation) else { return nil }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation.isMember(of: RecycleLocationPointAnnotation.self) else { return nil }
 
         let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "loc")
 
-        let infoButton = UIButton(type: .DetailDisclosure)
+        let infoButton = UIButton(type: .detailDisclosure)
         infoButton.addTarget(annotation,
                              action: #selector(RecycleLocationPointAnnotation.visit),
-                             forControlEvents: .TouchUpInside)
+                             for: .touchUpInside)
 
         view.rightCalloutAccessoryView = infoButton
         view.canShowCallout = true

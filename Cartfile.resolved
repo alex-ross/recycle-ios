@@ -1,3 +1,1 @@
-github "Alamofire/Alamofire" "3.4.1"
-github "jdg/MBProgressHUD" "0.9.2"
-github "SwiftyJSON/SwiftyJSON" "73670b94292b8d8496c398a973f56ac67789ba9f"
+github "jdg/MBProgressHUD" "1.1.0"
