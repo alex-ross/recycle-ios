@@ -87,7 +87,7 @@ class DetailTableViewController: UITableViewController {
             coordinate: recycleLocation.coordinates,
             addressDictionary: nil))
 
-        let directionsRequest = MKDirectionsRequest()
+        let directionsRequest = MKDirections.Request()
         directionsRequest.source = MKMapItem.forCurrentLocation()
         directionsRequest.destination = destination
         directionsRequest.transportType = .automobile
@@ -111,7 +111,7 @@ class DetailTableViewController: UITableViewController {
         annotation.coordinate = recycleLocation.coordinates
         mapView.addAnnotation(annotation)
 
-        let region = MKCoordinateRegionMakeWithDistance(recycleLocation.coordinates, 300, 300)
+        let region = MKCoordinateRegion.init(center: recycleLocation.coordinates, latitudinalMeters: 300, longitudinalMeters: 300)
         mapView.regionThatFits(region)
         mapView.setRegion(region, animated: true)
     }

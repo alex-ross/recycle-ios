@@ -117,23 +117,23 @@ class ListViewController: UIViewController {
         case glassButton:
             let active = toggleMaterial(.Glass)
             let image = buttonImage("Glas", active: active)
-            sender.setImage(image, for: UIControlState())
+            sender.setImage(image, for: UIControl.State())
         case cardboardButton:
             let active = toggleMaterial(.Cardboard)
             let image = buttonImage("Carboard", active: active)
-            sender.setImage(image, for: UIControlState())
+            sender.setImage(image, for: UIControl.State())
         case plasticButton:
             let active = toggleMaterial(.Plastic)
             let image = buttonImage("Plastic", active: active)
-            sender.setImage(image, for: UIControlState())
+            sender.setImage(image, for: UIControl.State())
         case magazinesButton:
             let active = toggleMaterial(.Magazines)
             let image = buttonImage("Papers", active: active)
-            sender.setImage(image, for: UIControlState())
+            sender.setImage(image, for: UIControl.State())
         case metalButton:
             let active = toggleMaterial(.Metal)
             let image = buttonImage("Metal", active: active)
-            sender.setImage(image, for: UIControlState())
+            sender.setImage(image, for: UIControl.State())
         default:
             break
         }
@@ -189,7 +189,7 @@ class ListViewController: UIViewController {
         self.tableView.insertSubview(refreshControl, at: 0)
     }
 
-    func refreshData() {
+    @objc func refreshData() {
         NSLog("Refresh controll was called")
         _fetchDataFromAPICalled = false
         locationManager.requestLocation()
@@ -223,7 +223,7 @@ extension ListViewController: CLLocationManagerDelegate {
 
         NSLog("LocationManager did update with location: \(location)")
 
-        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
+        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.regionThatFits(region)
         mapView.setRegion(region, animated: true)
 
