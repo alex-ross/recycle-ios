@@ -45,11 +45,11 @@ class DetailTableViewController: UITableViewController {
 
         kindLabel.text = recycleLocation.localizedKind
 
-        materialGlass.hidden = !hasMaterial("glass")
-        materialCardboard.hidden = !hasMaterial("cardboard")
-        materialPlastic.hidden = !hasMaterial("plastic")
-        materialMagazines.hidden = !hasMaterial("magazines")
-        materialMetal.hidden = !hasMaterial("metal")
+        materialGlass.isHidden = !hasMaterial("glass")
+        materialCardboard.isHidden = !hasMaterial("cardboard")
+        materialPlastic.isHidden = !hasMaterial("plastic")
+        materialMagazines.isHidden = !hasMaterial("magazines")
+        materialMetal.isHidden = !hasMaterial("metal")
 
         street.text = recycleLocation.address.street
         zipCode.text = recycleLocation.address.zipCode
@@ -70,7 +70,7 @@ class DetailTableViewController: UITableViewController {
         setupMapRegion()
     }
 
-    func opening(day: Int) -> String {
+    func opening(_ day: Int) -> String {
         if day < recycleLocation.openingHours.count {
             return recycleLocation.openingHours[day].openingText
         } else {
@@ -78,7 +78,7 @@ class DetailTableViewController: UITableViewController {
         }
     }
 
-    func hasMaterial(material: String) -> Bool {
+    func hasMaterial(_ material: String) -> Bool {
         return recycleLocation.materials.contains(material)
     }
 
@@ -87,15 +87,15 @@ class DetailTableViewController: UITableViewController {
             coordinate: recycleLocation.coordinates,
             addressDictionary: nil))
 
-        let directionsRequest = MKDirectionsRequest()
-        directionsRequest.source = MKMapItem.mapItemForCurrentLocation()
+        let directionsRequest = MKDirections.Request()
+        directionsRequest.source = MKMapItem.forCurrentLocation()
         directionsRequest.destination = destination
-        directionsRequest.transportType = .Automobile
+        directionsRequest.transportType = .automobile
 
         let directions = MKDirections(request: directionsRequest)
 
-        directions.calculateDirectionsWithCompletionHandler { response, error in
-            if error != nil {
+        directions.calculate { response, error in
+            if let error = error {
                 print(error)
                 return
             }
@@ -111,12 +111,12 @@ class DetailTableViewController: UITableViewController {
         annotation.coordinate = recycleLocation.coordinates
         mapView.addAnnotation(annotation)
 
-        let region = MKCoordinateRegionMakeWithDistance(recycleLocation.coordinates, 300, 300)
+        let region = MKCoordinateRegion.init(center: recycleLocation.coordinates, latitudinalMeters: 300, longitudinalMeters: 300)
         mapView.regionThatFits(region)
         mapView.setRegion(region, animated: true)
     }
 
-    func setupTravelTime(expectedTravelTime: NSTimeInterval) {
+    func setupTravelTime(_ expectedTravelTime: TimeInterval) {
         let interval = Int(expectedTravelTime)
         let minutes = (interval / 60) % 60
         let hours = (interval / 3600)

@@ -1,5 +1,4 @@
 import Foundation
-import SwiftyJSON
 import CoreLocation
 
 class RecycleLocationDeserializer: NSObject {
@@ -23,13 +22,13 @@ class RecycleLocationDeserializer: NSObject {
         )
     }
 
-    private static func parseCoordinates(json: JSON) -> CLLocationCoordinate2D {
+    fileprivate static func parseCoordinates(_ json: JSON) -> CLLocationCoordinate2D {
         let longitude = json["longitude"].doubleValue
         let latitude = json["latitude"].doubleValue
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 
-    private static func parseAddress(json: JSON) -> Address {
+    fileprivate static func parseAddress(_ json: JSON) -> Address {
         return Address(
             street: json["street_name"].string,
             zipCode: json["zip_code"].string,
@@ -37,11 +36,11 @@ class RecycleLocationDeserializer: NSObject {
         )
     }
 
-    private static func parseMaterials(json: JSON) -> [String] {
+    fileprivate static func parseMaterials(_ json: JSON) -> [String] {
         return json["materials"].arrayValue.map { $0.stringValue }
     }
 
-    private static func parseOpeningHours(json: JSON) -> [OpeningHour] {
+    fileprivate static func parseOpeningHours(_ json: JSON) -> [OpeningHour] {
         return json["opening_hours"].arrayValue.map { openingHour in
             if let array = openingHour.arrayObject {
                 return OpeningHour(openAt: array.first as? String, closeAt: array.last as? String, isUnknown: false)
