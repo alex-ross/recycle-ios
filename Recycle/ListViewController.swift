@@ -61,7 +61,7 @@ class ListViewController: UIViewController {
             CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             setupMapRegion()
         } else {
-            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
         }
 
         tableView.tableHeaderView = mapView
@@ -142,7 +142,7 @@ class ListViewController: UIViewController {
     }
 
     func toggleMaterial(_ material: Material) -> Bool {
-        if let index = materials.index(of: material) {
+        if let index = materials.firstIndex(of: material) {
             materials.remove(at: index)
             return false
         } else {
