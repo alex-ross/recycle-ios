@@ -38,13 +38,19 @@ class APIClient: NSObject {
                     error == nil else {
                         return
                 }
-                
-                let json = JSON(data: data)
-                let locations = RecycleLocationDeserializer.deserialize(jsonList: json["recycle_locations"].arrayValue)
-                success(locations)
+
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let recycleLocationsResponse = try! decoder.decode(RecycleLocationsResponse.self, from: data)
+
+                success(recycleLocationsResponse.recycleLocations)
             }
             
             task.resume()
         }
     }
+}
+
+struct RecycleLocationsResponse: Decodable {
+    let recycleLocations: [RecycleLocation]
 }

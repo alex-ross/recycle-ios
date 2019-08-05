@@ -17,7 +17,7 @@ class RecycleLocationTableViewCell: UITableViewCell {
 
     func setupView() {
         nameLabel.text = recycleLocation.name
-        kindLabel.text = recycleLocation.localizedKind
+        kindLabel.text = recycleLocation.kind.localized
 
         materialGlass.isHidden = !hasMaterial("glass")
         materialCardboard.isHidden = !hasMaterial("cardboard")

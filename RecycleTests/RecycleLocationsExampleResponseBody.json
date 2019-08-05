@@ -1,0 +1,2307 @@
+{
+    "recycle_locations" : [
+        {
+            "id" : 6782,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "87.472996831538",
+            "created_at" : "2016-04-29T02:44:09.767Z",
+            "longitude" : 14.46306,
+            "latitude" : 56.785829999999997,
+            "zip_code" : "35423",
+            "city" : "Vislanda",
+            "updated_at" : "2016-04-29T02:44:09.767Z",
+            "opening_hours" : [
+                [
+                    "06:30",
+                    "16:00"
+                ],
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 0.504926298611028,
+            "name" : "Husebyvägen",
+            "street_name" : "Husebyvägen 1"
+        },
+        {
+            "id" : 6776,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "118.803853036805",
+            "created_at" : "2016-04-29T02:44:09.741Z",
+            "longitude" : 14.54556,
+            "latitude" : 56.73556,
+            "zip_code" : null,
+            "city" : "Grimslöv",
+            "updated_at" : "2016-04-29T02:44:09.741Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 7.8356399644952202,
+            "name" : "Handelsboden",
+            "street_name" : null
+        },
+        {
+            "id" : 6892,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "235.771701195515",
+            "created_at" : "2016-04-29T02:44:10.318Z",
+            "longitude" : 14.33611,
+            "latitude" : 56.704720000000002,
+            "zip_code" : null,
+            "city" : "Eneryda",
+            "updated_at" : "2016-04-29T02:44:10.318Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 11.531991470431,
+            "name" : "Eneryda, Järnvägsövergång",
+            "street_name" : null
+        },
+        {
+            "id" : 6772,
+            "materials" : [
+                "glass",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "40.506758755959",
+            "created_at" : "2016-04-29T02:44:09.723Z",
+            "longitude" : 14.54861,
+            "latitude" : 56.89528,
+            "zip_code" : null,
+            "city" : "Alvesta",
+            "updated_at" : "2016-04-29T02:44:09.723Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 13.478137860548699,
+            "name" : "Blädingevägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6780,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "123.200215555786",
+            "created_at" : "2016-04-29T02:44:09.759Z",
+            "longitude" : 14.60111,
+            "latitude" : 56.689720000000001,
+            "zip_code" : null,
+            "city" : "Torne",
+            "updated_at" : "2016-04-29T02:44:09.759Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 13.891376449932199,
+            "name" : "Tvetarydskrysset",
+            "street_name" : null
+        },
+        {
+            "id" : 6774,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "40.073730187825",
+            "created_at" : "2016-04-29T02:44:09.733Z",
+            "longitude" : 14.55139,
+            "latitude" : 56.900280000000002,
+            "zip_code" : null,
+            "city" : "Alvesta",
+            "updated_at" : "2016-04-29T02:44:09.733Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 14.0534900229004,
+            "name" : "ICA-rätt",
+            "street_name" : null
+        },
+        {
+            "id" : 6775,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "33.161078577258",
+            "created_at" : "2016-04-29T02:44:09.737Z",
+            "longitude" : 14.53417,
+            "latitude" : 56.906939999999999,
+            "zip_code" : null,
+            "city" : "Alvesta",
+            "updated_at" : "2016-04-29T02:44:09.737Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 14.3438690899635,
+            "name" : "Odlingsvägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6771,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "46.749191377979",
+            "created_at" : "2016-04-29T02:44:09.718Z",
+            "longitude" : 14.57389,
+            "latitude" : 56.897500000000001,
+            "zip_code" : null,
+            "city" : "Alvesta",
+            "updated_at" : "2016-04-29T02:44:09.718Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 14.410286014157901,
+            "name" : "Vattentornet",
+            "street_name" : null
+        },
+        {
+            "id" : 6836,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "65.537172995583",
+            "created_at" : "2016-04-29T02:44:10.021Z",
+            "longitude" : 14.636939999999999,
+            "latitude" : 56.86833,
+            "zip_code" : null,
+            "city" : "Gemla",
+            "updated_at" : "2016-04-29T02:44:10.021Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 14.412208008793501,
+            "name" : "Stationsvägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6773,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "41.582558858607",
+            "created_at" : "2016-04-29T02:44:09.728Z",
+            "longitude" : 14.55889,
+            "latitude" : 56.90278,
+            "zip_code" : null,
+            "city" : "Alvesta",
+            "updated_at" : "2016-04-29T02:44:09.728Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 14.499662153903801,
+            "name" : "Willys  ",
+            "street_name" : null
+        },
+        {
+            "id" : 6777,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "1.060240183518",
+            "created_at" : "2016-04-29T02:44:09.745Z",
+            "longitude" : 14.45722,
+            "latitude" : 56.91639,
+            "zip_code" : null,
+            "city" : "Hjortsberga",
+            "updated_at" : "2016-04-29T02:44:09.745Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 14.5589047409396,
+            "name" : "Stationsplanen",
+            "street_name" : null
+        },
+        {
+            "id" : 6778,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "156.00728615599",
+            "created_at" : "2016-04-29T02:44:09.750Z",
+            "longitude" : 14.514720000000001,
+            "latitude" : 56.650829999999999,
+            "zip_code" : null,
+            "city" : "Lönashult",
+            "updated_at" : "2016-04-29T02:44:09.750Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 15.410820209973201,
+            "name" : "Tommys livs",
+            "street_name" : null
+        },
+        {
+            "id" : 6883,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "73.520947241015",
+            "created_at" : "2016-04-29T02:44:10.280Z",
+            "longitude" : 14.69361,
+            "latitude" : 56.856110000000001,
+            "zip_code" : null,
+            "city" : "Häringetorp",
+            "updated_at" : "2016-04-29T02:44:31.022Z",
+            "opening_hours" : [
+                [
+                    "06:30",
+                    "16:00"
+                ],
+                [
+                    "06:30",
+                    "16:00"
+                ],
+                [
+                    "06:30",
+                    "16:00"
+                ],
+                [
+                    "06:30",
+                    "16:00"
+                ],
+                [
+                    "06:30",
+                    "16:00"
+                ],
+                [
+
+                ],
+                [
+                    "10:00",
+                    "16:00"
+                ]
+            ],
+            "kind" : "recycle_center",
+            "distance" : 16.519546565314801,
+            "name" : "Avfallsverket Häringetorp (ÅVC)",
+            "street_name" : null
+        },
+        {
+            "id" : 6838,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "101.770452378125",
+            "created_at" : "2016-04-29T02:44:10.030Z",
+            "longitude" : 14.71167,
+            "latitude" : 56.731940000000002,
+            "zip_code" : null,
+            "city" : "Kalvsvik",
+            "updated_at" : "2016-04-29T02:44:10.030Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 16.750299428347901,
+            "name" : "Affären",
+            "street_name" : null
+        },
+        {
+            "id" : 6848,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "89.410170144056",
+            "created_at" : "2016-04-29T02:44:10.081Z",
+            "longitude" : 14.73306,
+            "latitude" : 56.788330000000002,
+            "zip_code" : null,
+            "city" : "Vederslöv",
+            "updated_at" : "2016-04-29T02:44:10.081Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 16.951292693200799,
+            "name" : "Infarten från Danningelanda",
+            "street_name" : null
+        },
+        {
+            "id" : 6894,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "237.775413075992",
+            "created_at" : "2016-04-29T02:44:10.325Z",
+            "longitude" : 14.265000000000001,
+            "latitude" : 56.66583,
+            "zip_code" : null,
+            "city" : "Liatorp",
+            "updated_at" : "2016-04-29T02:44:10.325Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 17.636237056289001,
+            "name" : "Liatorp",
+            "street_name" : null
+        },
+        {
+            "id" : 6891,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "215.437982480217",
+            "created_at" : "2016-04-29T02:44:10.314Z",
+            "longitude" : 14.341390000000001,
+            "latitude" : 56.626109999999997,
+            "zip_code" : null,
+            "city" : "Virestad",
+            "updated_at" : "2016-04-29T02:44:10.314Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 19.0236266069065,
+            "name" : "Virestad, Horshultsvägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6790,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "262.899202712656",
+            "created_at" : "2016-04-29T02:44:09.800Z",
+            "longitude" : 14.147779999999999,
+            "latitude" : 56.747219999999999,
+            "zip_code" : null,
+            "city" : "Agunnaryd",
+            "updated_at" : "2016-04-29T02:44:09.800Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 19.187097701299098,
+            "name" : "Infarten, affären, Bråna 3:32, Agunnaryd",
+            "street_name" : null
+        },
+        {
+            "id" : 6801,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "285.142644062489",
+            "created_at" : "2016-04-29T02:44:09.858Z",
+            "longitude" : 14.164999999999999,
+            "latitude" : 56.863889999999998,
+            "zip_code" : null,
+            "city" : "Ryssby",
+            "updated_at" : "2016-04-29T02:44:09.858Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 19.6715279860239,
+            "name" : "P-plats, Ryssby",
+            "street_name" : null
+        },
+        {
+            "id" : 6879,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "72.192153311881",
+            "created_at" : "2016-04-29T02:44:10.261Z",
+            "longitude" : 14.74306,
+            "latitude" : 56.878059999999998,
+            "zip_code" : null,
+            "city" : "Öjaby\/Räppe",
+            "updated_at" : "2016-04-29T02:44:10.261Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 20.335498889176201,
+            "name" : "Östra Räppevägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6878,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "69.023507278623",
+            "created_at" : "2016-04-29T02:44:10.256Z",
+            "longitude" : 14.738329999999999,
+            "latitude" : 56.894170000000003,
+            "zip_code" : null,
+            "city" : "Öjaby\/Räppe",
+            "updated_at" : "2016-04-29T02:44:10.256Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 21.059242458158,
+            "name" : "Runvägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6877,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "67.965276340405",
+            "created_at" : "2016-04-29T02:44:10.250Z",
+            "longitude" : 14.73917,
+            "latitude" : 56.900559999999999,
+            "zip_code" : null,
+            "city" : "Öjaby\/Räppe",
+            "updated_at" : "2016-04-29T02:44:10.250Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 21.514812671058198,
+            "name" : "Badplatsen",
+            "street_name" : null
+        },
+        {
+            "id" : 6897,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "238.152242442442",
+            "created_at" : "2016-04-29T02:44:10.336Z",
+            "longitude" : 14.219720000000001,
+            "latitude" : 56.63944,
+            "zip_code" : null,
+            "city" : "Diö",
+            "updated_at" : "2016-04-29T02:44:10.336Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 21.667167211949899,
+            "name" : "Diö, Gamla kvarnen",
+            "street_name" : null
+        },
+        {
+            "id" : 6852,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "72.446877222894",
+            "created_at" : "2016-04-29T02:44:10.102Z",
+            "longitude" : 14.76333,
+            "latitude" : 56.88306,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.102Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 21.6797705664913,
+            "name" : "Samarkand, västra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6858,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "80.550762633974",
+            "created_at" : "2016-04-29T02:44:10.138Z",
+            "longitude" : 14.79917,
+            "latitude" : 56.842779999999998,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.138Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 21.907156137975701,
+            "name" : "Teleborg",
+            "street_name" : null
+        },
+        {
+            "id" : 6855,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "81.362068368566",
+            "created_at" : "2016-04-29T02:44:10.120Z",
+            "longitude" : 14.81194,
+            "latitude" : 56.83972,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.120Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 22.559378841661299,
+            "name" : "Teleborg",
+            "street_name" : null
+        },
+        {
+            "id" : 6846,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "92.480543052105",
+            "created_at" : "2016-04-29T02:44:10.071Z",
+            "longitude" : 14.824719999999999,
+            "latitude" : 56.769440000000003,
+            "zip_code" : null,
+            "city" : "Tävelsås",
+            "updated_at" : "2016-04-29T02:44:10.071Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 22.6070772593086,
+            "name" : "Planetvägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6854,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "78.891721061468",
+            "created_at" : "2016-04-29T02:44:10.115Z",
+            "longitude" : 14.80472,
+            "latitude" : 56.854170000000003,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.115Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 22.623146843802701,
+            "name" : "Teleborg Torparängen",
+            "street_name" : null
+        },
+        {
+            "id" : 6860,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "75.727754637043",
+            "created_at" : "2016-04-29T02:44:10.149Z",
+            "longitude" : 14.796939999999999,
+            "latitude" : 56.872500000000002,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.149Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 22.955431547850701,
+            "name" : "Södra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6871,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "75.050856660224",
+            "created_at" : "2016-04-29T02:44:10.218Z",
+            "longitude" : 14.796390000000001,
+            "latitude" : 56.876669999999997,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.218Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 23.123616388079199,
+            "name" : "Växjö Centrum",
+            "street_name" : null
+        },
+        {
+            "id" : 6851,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "73.700314881408",
+            "created_at" : "2016-04-29T02:44:10.097Z",
+            "longitude" : 14.79139,
+            "latitude" : 56.883890000000001,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.097Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 23.216356670713299,
+            "name" : "Västra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6882,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "71.678754248727",
+            "created_at" : "2016-04-29T02:44:10.275Z",
+            "longitude" : 14.78139,
+            "latitude" : 56.893610000000002,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:31.013Z",
+            "opening_hours" : [
+                [
+                    "07:00",
+                    "20:00"
+                ],
+                [
+                    "07:00",
+                    "20:00"
+                ],
+                [
+                    "07:00",
+                    "20:00"
+                ],
+                [
+                    "07:00",
+                    "20:00"
+                ],
+                [
+                    "07:00",
+                    "16:00"
+                ],
+                [
+                    "08:00",
+                    "14:00"
+                ],
+                [
+
+                ]
+            ],
+            "kind" : "recycle_center",
+            "distance" : 23.220308836868,
+            "name" : "Norremark (ÅVC)",
+            "street_name" : null
+        },
+        {
+            "id" : 6857,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "80.48054084989",
+            "created_at" : "2016-04-29T02:44:10.133Z",
+            "longitude" : 14.82306,
+            "latitude" : 56.84722,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.133Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 23.440694913344601,
+            "name" : "Teleborg",
+            "street_name" : null
+        },
+        {
+            "id" : 6859,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "79.209548883404",
+            "created_at" : "2016-04-29T02:44:10.144Z",
+            "longitude" : 14.821109999999999,
+            "latitude" : 56.85528,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.144Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 23.604350376618001,
+            "name" : "Statoil Teleborg",
+            "street_name" : null
+        },
+        {
+            "id" : 6576,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "324.294105228328",
+            "created_at" : "2016-04-29T02:44:08.768Z",
+            "longitude" : 14.31278,
+            "latitude" : 56.983060000000002,
+            "zip_code" : null,
+            "city" : "Rydaholm",
+            "updated_at" : "2016-04-29T02:44:08.768Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 23.6046611258393,
+            "name" : "PLS, Rydaholm",
+            "street_name" : null
+        },
+        {
+            "id" : 6856,
+            "materials" : [
+                "glass",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "80.005378737",
+            "created_at" : "2016-04-29T02:44:10.125Z",
+            "longitude" : 14.824170000000001,
+            "latitude" : 56.850560000000002,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.125Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 23.615507878484799,
+            "name" : "Teleborg",
+            "street_name" : null
+        },
+        {
+            "id" : 6872,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "73.927875201371",
+            "created_at" : "2016-04-29T02:44:10.223Z",
+            "longitude" : 14.79833,
+            "latitude" : 56.884439999999998,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.223Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 23.6178041480945,
+            "name" : "Växjö Centrum",
+            "street_name" : null
+        },
+        {
+            "id" : 6853,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "72.862943318666",
+            "created_at" : "2016-04-29T02:44:10.108Z",
+            "longitude" : 14.79472,
+            "latitude" : 56.890279999999997,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.108Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 23.734354822693501,
+            "name" : "Västra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6873,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "73.881212306114",
+            "created_at" : "2016-04-29T02:44:10.230Z",
+            "longitude" : 14.80306,
+            "latitude" : 56.886110000000002,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.230Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 23.9585106146748,
+            "name" : "Växjö Centrum",
+            "street_name" : null
+        },
+        {
+            "id" : 6870,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "70.452016616195",
+            "created_at" : "2016-04-29T02:44:10.212Z",
+            "longitude" : 14.78833,
+            "latitude" : 56.903889999999997,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.212Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.182951936261599,
+            "name" : "Hovshaga",
+            "street_name" : null
+        },
+        {
+            "id" : 6577,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "324.238879229394",
+            "created_at" : "2016-04-29T02:44:08.773Z",
+            "longitude" : 14.30889,
+            "latitude" : 56.988059999999997,
+            "zip_code" : null,
+            "city" : "Rydaholm",
+            "updated_at" : "2016-04-29T02:44:08.773Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.2083293192097,
+            "name" : "Centralplan",
+            "street_name" : null
+        },
+        {
+            "id" : 6864,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "74.623062416689",
+            "created_at" : "2016-04-29T02:44:10.171Z",
+            "longitude" : 14.811669999999999,
+            "latitude" : 56.883609999999997,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.171Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.297340377709698,
+            "name" : "Lineborgsplan, norra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6874,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "71.644785527323",
+            "created_at" : "2016-04-29T02:44:10.235Z",
+            "longitude" : 14.797499999999999,
+            "latitude" : 56.899169999999998,
+            "zip_code" : null,
+            "city" : "Araby",
+            "updated_at" : "2016-04-29T02:44:10.235Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.377374850437501,
+            "name" : "Araby",
+            "street_name" : null
+        },
+        {
+            "id" : 6869,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "68.609302171791",
+            "created_at" : "2016-04-29T02:44:10.206Z",
+            "longitude" : 14.781940000000001,
+            "latitude" : 56.913609999999998,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.206Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.4690022480168,
+            "name" : "Hovshaga",
+            "street_name" : null
+        },
+        {
+            "id" : 6862,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "75.00314253982",
+            "created_at" : "2016-04-29T02:44:10.159Z",
+            "longitude" : 14.818059999999999,
+            "latitude" : 56.882779999999997,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.159Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.6047391965757,
+            "name" : "Teknikum, norra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6850,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "76.7359563028",
+            "created_at" : "2016-04-29T02:44:10.092Z",
+            "longitude" : 14.82639,
+            "latitude" : 56.873060000000002,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.092Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.616145880454301,
+            "name" : "Östra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6867,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "71.25734041723",
+            "created_at" : "2016-04-29T02:44:10.194Z",
+            "longitude" : 14.79889,
+            "latitude" : 56.90222,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.194Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.626054098231801,
+            "name" : "Hovshaga",
+            "street_name" : null
+        },
+        {
+            "id" : 6863,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "73.713506179713",
+            "created_at" : "2016-04-29T02:44:10.165Z",
+            "longitude" : 14.81639,
+            "latitude" : 56.891109999999998,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.165Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.934109328959099,
+            "name" : "Macken, norra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6868,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "69.002423794001",
+            "created_at" : "2016-04-29T02:44:10.201Z",
+            "longitude" : 14.79083,
+            "latitude" : 56.914439999999999,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.201Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 24.963162391418599,
+            "name" : "Hovshaga",
+            "street_name" : null
+        },
+        {
+            "id" : 6849,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "77.119136215851",
+            "created_at" : "2016-04-29T02:44:10.086Z",
+            "longitude" : 14.83417,
+            "latitude" : 56.872219999999999,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.086Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 25.0156123320712,
+            "name" : "Östra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6779,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "30.179648337977",
+            "created_at" : "2016-04-29T02:44:09.754Z",
+            "longitude" : 14.57972,
+            "latitude" : 57.000279999999997,
+            "zip_code" : null,
+            "city" : "Moheda",
+            "updated_at" : "2016-04-29T02:44:09.754Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 25.062344211324302,
+            "name" : "Öster om järnvägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6861,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "75.381180642629",
+            "created_at" : "2016-04-29T02:44:10.154Z",
+            "longitude" : 14.83,
+            "latitude" : 56.883330000000001,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.154Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 25.285173245191601,
+            "name" : "Norra Växjö",
+            "street_name" : null
+        },
+        {
+            "id" : 6866,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "76.087285522237",
+            "created_at" : "2016-04-29T02:44:10.186Z",
+            "longitude" : 14.83417,
+            "latitude" : 56.879440000000002,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.186Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 25.334004651379999,
+            "name" : "Rondellen Högstorp",
+            "street_name" : null
+        },
+        {
+            "id" : 6783,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "28.991616416895",
+            "created_at" : "2016-04-29T02:44:09.771Z",
+            "longitude" : 14.57583,
+            "latitude" : 57.003889999999998,
+            "zip_code" : null,
+            "city" : "Moheda",
+            "updated_at" : "2016-04-29T02:44:09.771Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 25.375663359822099,
+            "name" : "Västra Järnvägsgatan",
+            "street_name" : null
+        },
+        {
+            "id" : 6890,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "70.421432098214",
+            "created_at" : "2016-04-29T02:44:10.310Z",
+            "longitude" : 14.81667,
+            "latitude" : 56.914169999999999,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.310Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 26.248395043030499,
+            "name" : "Evedalsvägen (Östra Lugnets skola)",
+            "street_name" : null
+        },
+        {
+            "id" : 6865,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "76.250357743475",
+            "created_at" : "2016-04-29T02:44:10.175Z",
+            "longitude" : 14.852499999999999,
+            "latitude" : 56.882779999999997,
+            "zip_code" : null,
+            "city" : "Växjö",
+            "updated_at" : "2016-04-29T02:44:10.175Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 26.5022846697711,
+            "name" : "Högstorp",
+            "street_name" : null
+        },
+        {
+            "id" : 6880,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "45.64799371737",
+            "created_at" : "2016-04-29T02:44:10.266Z",
+            "longitude" : 14.671110000000001,
+            "latitude" : 56.996940000000002,
+            "zip_code" : null,
+            "city" : "Ör",
+            "updated_at" : "2016-04-29T02:44:10.266Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 26.936364660931002,
+            "name" : "Lantcafét",
+            "street_name" : null
+        },
+        {
+            "id" : 6845,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "72.266340855",
+            "created_at" : "2016-04-29T02:44:10.063Z",
+            "longitude" : 14.856389999999999,
+            "latitude" : 56.913890000000002,
+            "zip_code" : null,
+            "city" : "Sandsbro",
+            "updated_at" : "2016-04-29T02:44:10.063Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 28.288007084261,
+            "name" : "Furumovägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6781,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "25.108273027943",
+            "created_at" : "2016-04-29T02:44:09.763Z",
+            "longitude" : 14.57056,
+            "latitude" : 57.032499999999999,
+            "zip_code" : null,
+            "city" : "Torpsbruk",
+            "updated_at" : "2016-04-29T02:44:09.763Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 28.353773576270399,
+            "name" : "Affären",
+            "street_name" : null
+        },
+        {
+            "id" : 6898,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "180.825958959694",
+            "created_at" : "2016-04-29T02:44:10.340Z",
+            "longitude" : 14.45111,
+            "latitude" : 56.529719999999998,
+            "zip_code" : null,
+            "city" : "Häradsbäck",
+            "updated_at" : "2016-04-29T02:44:10.340Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 28.4384757588284,
+            "name" : "Häradsbäck, P-plats Knoxhultsvägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6881,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "95.490833655537",
+            "created_at" : "2016-04-29T02:44:10.271Z",
+            "longitude" : 14.921939999999999,
+            "latitude" : 56.740560000000002,
+            "zip_code" : null,
+            "city" : "Ingelstad",
+            "updated_at" : "2016-04-29T02:44:10.271Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 28.905126138680199,
+            "name" : "Brandstationen",
+            "street_name" : null
+        },
+        {
+            "id" : 6837,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "95.905631128277",
+            "created_at" : "2016-04-29T02:44:10.026Z",
+            "longitude" : 14.931940000000001,
+            "latitude" : 56.736109999999996,
+            "zip_code" : null,
+            "city" : "Ingelstad",
+            "updated_at" : "2016-04-29T02:44:10.026Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 29.595059811198599,
+            "name" : "Sjöbolsvägen",
+            "street_name" : null
+        },
+        {
+            "id" : 6847,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "100.954516287177",
+            "created_at" : "2016-04-29T02:44:10.076Z",
+            "longitude" : 14.914999999999999,
+            "latitude" : 56.696390000000001,
+            "zip_code" : null,
+            "city" : "Uråsa",
+            "updated_at" : "2016-04-29T02:44:10.076Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 29.760659449543802,
+            "name" : "Kyrkan",
+            "street_name" : null
+        },
+        {
+            "id" : 6802,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "265.111793747634",
+            "created_at" : "2016-04-29T02:44:09.864Z",
+            "longitude" : 13.97194,
+            "latitude" : 56.744169999999997,
+            "zip_code" : null,
+            "city" : "Södra Ljunga",
+            "updated_at" : "2016-04-29T02:44:09.864Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 29.7829740041058,
+            "name" : "Affären",
+            "street_name" : null
+        },
+        {
+            "id" : 6902,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "235.128677588597",
+            "created_at" : "2016-04-29T02:44:10.361Z",
+            "longitude" : 14.15278,
+            "latitude" : 56.575000000000003,
+            "zip_code" : null,
+            "city" : "Älmhult",
+            "updated_at" : "2016-04-29T02:44:10.361Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 29.799121572074199,
+            "name" : "Söder tennisbanan Möckeln",
+            "street_name" : null
+        },
+        {
+            "id" : 6887,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "96.348963668832",
+            "created_at" : "2016-04-29T02:44:10.297Z",
+            "longitude" : 14.945830000000001,
+            "latitude" : 56.730829999999997,
+            "zip_code" : null,
+            "city" : "Ingelstad",
+            "updated_at" : "2016-04-29T02:44:31.048Z",
+            "opening_hours" : [
+                [
+
+                ],
+                [
+                    "14:00",
+                    "19:00"
+                ],
+                [
+
+                ],
+                [
+                    "14:00",
+                    "18:00"
+                ],
+                [
+
+                ],
+                [
+
+                ],
+                [
+
+                ]
+            ],
+            "kind" : "recycle_center",
+            "distance" : 30.540785808097802,
+            "name" : "Ingelstad (ÅVC)",
+            "street_name" : null
+        },
+        {
+            "id" : 6895,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "251.523321344146",
+            "created_at" : "2016-04-29T02:44:10.328Z",
+            "longitude" : 14.02694,
+            "latitude" : 56.642499999999998,
+            "zip_code" : null,
+            "city" : "Pjätteryd",
+            "updated_at" : "2016-04-29T02:44:10.328Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 30.568944002739499,
+            "name" : "Pjätteryd, Brandstationen",
+            "street_name" : null
+        },
+        {
+            "id" : 6574,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "322.119232887073",
+            "created_at" : "2016-04-29T02:44:08.759Z",
+            "longitude" : 14.25722,
+            "latitude" : 57.039439999999999,
+            "zip_code" : null,
+            "city" : "Horda",
+            "updated_at" : "2016-04-29T02:44:08.759Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 30.681945355465501,
+            "name" : "Affären, Horda",
+            "street_name" : null
+        },
+        {
+            "id" : 6908,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "232.450348105595",
+            "created_at" : "2016-04-29T02:44:10.386Z",
+            "longitude" : 14.16222,
+            "latitude" : 56.560560000000002,
+            "zip_code" : null,
+            "city" : "Älmhult",
+            "updated_at" : "2016-04-29T02:44:10.386Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_center",
+            "distance" : 30.739229254593798,
+            "name" : "Äskya tippen (ÅVC)",
+            "street_name" : null
+        },
+        {
+            "id" : 6907,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "232.853968148503",
+            "created_at" : "2016-04-29T02:44:10.382Z",
+            "longitude" : 14.15278,
+            "latitude" : 56.556669999999997,
+            "zip_code" : null,
+            "city" : "Älmhult",
+            "updated_at" : "2016-04-29T02:44:10.382Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 31.427787130169101,
+            "name" : "Värmeverket, mitt emot",
+            "street_name" : null
+        },
+        {
+            "id" : 6796,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "275.555815353981",
+            "created_at" : "2016-04-29T02:44:09.829Z",
+            "longitude" : 13.94556,
+            "latitude" : 56.835000000000001,
+            "zip_code" : null,
+            "city" : "Ljungby",
+            "updated_at" : "2016-04-29T02:44:09.829Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 31.482559729798499,
+            "name" : "ICA Maxi",
+            "street_name" : null
+        },
+        {
+            "id" : 6799,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "276.277287547483",
+            "created_at" : "2016-04-29T02:44:09.847Z",
+            "longitude" : 13.946389999999999,
+            "latitude" : 56.841389999999997,
+            "zip_code" : null,
+            "city" : "Ljungby",
+            "updated_at" : "2016-04-29T02:44:09.847Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 31.562490579256099,
+            "name" : "Bensinmacken Ingo",
+            "street_name" : null
+        },
+        {
+            "id" : 6903,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "234.005345238109",
+            "created_at" : "2016-04-29T02:44:10.366Z",
+            "longitude" : 14.13944,
+            "latitude" : 56.55639,
+            "zip_code" : null,
+            "city" : "Älmhult",
+            "updated_at" : "2016-04-29T02:44:10.366Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 31.9379801816922,
+            "name" : "Söder om Gillet",
+            "street_name" : null
+        },
+        {
+            "id" : 6794,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "285.522023261363",
+            "created_at" : "2016-04-29T02:44:09.819Z",
+            "longitude" : 13.98639,
+            "latitude" : 56.915559999999999,
+            "zip_code" : null,
+            "city" : "Lagan",
+            "updated_at" : "2016-04-29T02:44:09.819Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 31.9441569978252,
+            "name" : "P-plats Torg 13:1, Lagan",
+            "street_name" : null
+        },
+        {
+            "id" : 6876,
+            "materials" : [
+                "glass",
+                "cardboard",
+                "metal",
+                "plastic",
+                "magazines"
+            ],
+            "bearing" : "85.470445767266",
+            "created_at" : "2016-04-29T02:44:10.244Z",
+            "longitude" : 14.97833,
+            "latitude" : 56.82694,
+            "zip_code" : null,
+            "city" : "Åryd",
+            "updated_at" : "2016-04-29T02:44:10.244Z",
+            "opening_hours" : [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "kind" : "recycle_station",
+            "distance" : 32.202545553267399,
+            "name" : "Billavägen\/Växjövägen",
+            "street_name" : null
+        }
+    ]
+}

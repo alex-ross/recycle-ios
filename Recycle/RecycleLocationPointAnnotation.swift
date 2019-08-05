@@ -12,7 +12,7 @@ class RecycleLocationPointAnnotation: MKPointAnnotation {
 
         coordinate = recycleLocation.coordinates
         title = recycleLocation.name
-        subtitle = recycleLocation.localizedKind
+        subtitle = recycleLocation.kind.localized
     }
 
     @objc func visit() {
