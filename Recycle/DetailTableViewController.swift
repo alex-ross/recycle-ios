@@ -43,7 +43,7 @@ class DetailTableViewController: UITableViewController {
 
         title = recycleLocation.name
 
-        kindLabel.text = recycleLocation.localizedKind
+        kindLabel.text = recycleLocation.kind.localized
 
         materialGlass.isHidden = !hasMaterial("glass")
         materialCardboard.isHidden = !hasMaterial("cardboard")
